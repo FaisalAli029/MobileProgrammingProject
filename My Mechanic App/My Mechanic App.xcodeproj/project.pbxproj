@@ -16,6 +16,9 @@
 		22E66EF82950CB88006094AF /* My_Mechanic_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E66EF72950CB88006094AF /* My_Mechanic_AppTests.swift */; };
 		22E66F022950CB88006094AF /* My_Mechanic_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E66F012950CB88006094AF /* My_Mechanic_AppUITests.swift */; };
 		22E66F042950CB88006094AF /* My_Mechanic_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E66F032950CB88006094AF /* My_Mechanic_AppUITestsLaunchTests.swift */; };
+		8E7665E12966770C001846A8 /* SettingsMainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E02966770C001846A8 /* SettingsMainScreen.storyboard */; };
+		8E7665E329667717001846A8 /* AboutMainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E229667717001846A8 /* AboutMainScreen.storyboard */; };
+		8ECFD254296669C8004BADB1 /* MyCarsMainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ECFD253296669C8004BADB1 /* MyCarsMainScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		22E66EFD2950CB88006094AF /* My Mechanic AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Mechanic AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E66F012950CB88006094AF /* My_Mechanic_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Mechanic_AppUITests.swift; sourceTree = "<group>"; };
 		22E66F032950CB88006094AF /* My_Mechanic_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Mechanic_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E7665E02966770C001846A8 /* SettingsMainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsMainScreen.storyboard; sourceTree = "<group>"; };
+		8E7665E229667717001846A8 /* AboutMainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutMainScreen.storyboard; sourceTree = "<group>"; };
+		8ECFD253296669C8004BADB1 /* MyCarsMainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyCarsMainScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +105,13 @@
 		22E66EDF2950CB86006094AF /* My Mechanic App */ = {
 			isa = PBXGroup;
 			children = (
+				8ECFD252296667DC004BADB1 /* Globals */,
+				8ECFD24E296666B5004BADB1 /* Screen Views (Storyboards) */,
+				8ECFD25029666753004BADB1 /* Controllers */,
+				8ECFD251296667A9004BADB1 /* Models */,
 				22E66EE02950CB86006094AF /* AppDelegate.swift */,
 				22E66EE22950CB86006094AF /* SceneDelegate.swift */,
-				22E66EE42950CB86006094AF /* ViewController.swift */,
-				22E66EE62950CB86006094AF /* Main.storyboard */,
 				22E66EE92950CB87006094AF /* Assets.xcassets */,
-				22E66EEB2950CB87006094AF /* LaunchScreen.storyboard */,
 				22E66EEE2950CB87006094AF /* Info.plist */,
 			);
 			path = "My Mechanic App";
@@ -125,6 +132,64 @@
 				22E66F032950CB88006094AF /* My_Mechanic_AppUITestsLaunchTests.swift */,
 			);
 			path = "My Mechanic AppUITests";
+			sourceTree = "<group>";
+		};
+		8E7665DE296676BD001846A8 /* Settings Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8E7665E02966770C001846A8 /* SettingsMainScreen.storyboard */,
+			);
+			name = "Settings Screens";
+			sourceTree = "<group>";
+		};
+		8E7665DF296676E7001846A8 /* About Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8E7665E229667717001846A8 /* AboutMainScreen.storyboard */,
+			);
+			path = "About Screens";
+			sourceTree = "<group>";
+		};
+		8ECFD24E296666B5004BADB1 /* Screen Views (Storyboards) */ = {
+			isa = PBXGroup;
+			children = (
+				22E66EE62950CB86006094AF /* Main.storyboard */,
+				22E66EEB2950CB87006094AF /* LaunchScreen.storyboard */,
+				8ECFD25529666CAC004BADB1 /* My Cars Screens */,
+				8E7665DE296676BD001846A8 /* Settings Screens */,
+				8E7665DF296676E7001846A8 /* About Screens */,
+			);
+			path = "Screen Views (Storyboards)";
+			sourceTree = "<group>";
+		};
+		8ECFD25029666753004BADB1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				22E66EE42950CB86006094AF /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8ECFD251296667A9004BADB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8ECFD252296667DC004BADB1 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		8ECFD25529666CAC004BADB1 /* My Cars Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8ECFD253296669C8004BADB1 /* MyCarsMainScreen.storyboard */,
+			);
+			name = "My Cars Screens";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				22E66EED2950CB87006094AF /* LaunchScreen.storyboard in Resources */,
+				8ECFD254296669C8004BADB1 /* MyCarsMainScreen.storyboard in Resources */,
 				22E66EEA2950CB87006094AF /* Assets.xcassets in Resources */,
+				8E7665E329667717001846A8 /* AboutMainScreen.storyboard in Resources */,
 				22E66EE82950CB86006094AF /* Main.storyboard in Resources */,
+				8E7665E12966770C001846A8 /* SettingsMainScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
