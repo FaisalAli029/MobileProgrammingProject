@@ -27,30 +27,30 @@
             </objects>
             <point key="canvasLocation" x="192" y="14"/>
         </scene>
-        <!--MyCarsMainScreen-->
+        <!--MyCarsScreen-->
         <scene sceneID="tlw-lb-f4p">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyCarsMainScreen" referencedIdentifier="MyCarsMainScreen" id="YeX-ZZ-s8D" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MyCars Screen" referencedIdentifier="MyCarsScreen" id="YeX-ZZ-s8D" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Cars" image="car" catalog="system" id="KKo-hA-n2Y"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l80-1r-IEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1106" y="-241"/>
         </scene>
-        <!--SettingsMainScreen-->
+        <!--SettingsScreen-->
         <scene sceneID="CRo-GW-86k">
             <objects>
-                <viewControllerPlaceholder storyboardName="SettingsMainScreen" referencedIdentifier="SettingsMainScreen" id="9Tw-6W-gqx" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Settings Screen" referencedIdentifier="SettingsScreen" id="9Tw-6W-gqx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="P1x-um-53b"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUW-6N-Bo1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1109" y="14"/>
         </scene>
-        <!--AboutMainScreen-->
+        <!--AboutScreen-->
         <scene sceneID="Dce-pQ-NCh">
             <objects>
-                <viewControllerPlaceholder storyboardName="AboutMainScreen" referencedIdentifier="AboutMainScreen" id="WsJ-Dp-xBe" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="About Screen" referencedIdentifier="AboutScreen" id="WsJ-Dp-xBe" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="7cI-yC-WMc"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rDM-s2-oUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

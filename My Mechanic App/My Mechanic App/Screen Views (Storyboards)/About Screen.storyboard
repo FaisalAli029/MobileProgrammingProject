@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
+        <!--About-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
@@ -18,33 +18,33 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="aye-JG-vfD"/>
-                    <navigationItem key="navigationItem" title="Settings" id="93y-my-ijP"/>
+                    <tabBarItem key="tabBarItem" title="About" image="doc.append" catalog="system" id="tfH-yE-rol"/>
+                    <navigationItem key="navigationItem" title="About" id="h3v-OP-qKl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="-2"/>
+            <point key="canvasLocation" x="141" y="-2"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="j7m-Vy-GqO">
+        <scene sceneID="W34-Q8-ZFS">
             <objects>
-                <navigationController storyboardIdentifier="SettingsMainScreen" id="ZXJ-7V-hHX" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Ops-eB-9sf">
+                <navigationController storyboardIdentifier="AboutScreen" id="j0T-RC-5Kn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gd0-oy-fbw">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="XlX-9v-4bN"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="BzA-jW-NRF"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oNq-yd-q1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XX5-sa-1fU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-785" y="-2"/>
         </scene>
     </scenes>
     <resources>
-        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="doc.append" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
