@@ -15,8 +15,31 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Mechanic App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFK-P5-8eh">
+                                <rect key="frame" x="0.0" y="180" width="393" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eA4-tK-c5b">
+                                <rect key="frame" x="50" y="270.66666666666669" width="293" height="196.33333333333331"/>
+                                <string key="text">This app helps track your cars service history by adding all your car maintenance and repair services. Create or edit your records by inserting the date, type of service, the mileage, and the total cost in a simple way. Add all your cars and store them in the app. Create your profile to personalize your app.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NFK-P5-8eh" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="5Z0-wh-65b"/>
+                            <constraint firstItem="NFK-P5-8eh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="OJf-Kg-GpC"/>
+                            <constraint firstItem="eA4-tK-c5b" firstAttribute="top" secondItem="NFK-P5-8eh" secondAttribute="bottom" constant="50" id="U6p-7q-1hg"/>
+                            <constraint firstAttribute="trailing" secondItem="eA4-tK-c5b" secondAttribute="trailing" constant="50" id="l7l-MZ-GmK"/>
+                            <constraint firstItem="NFK-P5-8eh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qa5-TX-vRD"/>
+                            <constraint firstItem="eA4-tK-c5b" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="vGs-IE-OZu"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="doc.append" catalog="system" id="tfH-yE-rol"/>
                     <navigationItem key="navigationItem" title="About" id="h3v-OP-qKl"/>
@@ -24,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="-2"/>
+            <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W34-Q8-ZFS">
