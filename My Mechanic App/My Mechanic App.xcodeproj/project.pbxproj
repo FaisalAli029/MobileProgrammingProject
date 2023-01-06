@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		22E66EE12950CB86006094AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E66EE02950CB86006094AF /* AppDelegate.swift */; };
 		22E66EE32950CB86006094AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E66EE22950CB86006094AF /* SceneDelegate.swift */; };
-		22E66EE52950CB86006094AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E66EE42950CB86006094AF /* ViewController.swift */; };
 		22E66EE82950CB86006094AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E66EE62950CB86006094AF /* Main.storyboard */; };
 		22E66EEA2950CB87006094AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E66EE92950CB87006094AF /* Assets.xcassets */; };
 		22E66EED2950CB87006094AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E66EEB2950CB87006094AF /* LaunchScreen.storyboard */; };
@@ -18,6 +17,12 @@
 		22E66F042950CB88006094AF /* My_Mechanic_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E66F032950CB88006094AF /* My_Mechanic_AppUITestsLaunchTests.swift */; };
 		8E7665E12966770C001846A8 /* Settings Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E02966770C001846A8 /* Settings Screen.storyboard */; };
 		8E7665E329667717001846A8 /* About Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E229667717001846A8 /* About Screen.storyboard */; };
+		8E7665E829674F28001846A8 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7665E729674F28001846A8 /* Car.swift */; };
+		8E7665EA29675FDC001846A8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7665E929675FDC001846A8 /* Service.swift */; };
+		8E7665EC29676227001846A8 /* CarsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7665EB29676227001846A8 /* CarsData.swift */; };
+		8E7665F0296772ED001846A8 /* MyCarsMainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7665EF296772ED001846A8 /* MyCarsMainScreenViewController.swift */; };
+		8EB6F5862967863E00B3269F /* MyCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6F5842967863E00B3269F /* MyCarTableViewCell.swift */; };
+		8EB6F5872967863F00B3269F /* MyCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB6F5852967863E00B3269F /* MyCarTableViewCell.xib */; };
 		8ECFD254296669C8004BADB1 /* MyCars Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ECFD253296669C8004BADB1 /* MyCars Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +47,6 @@
 		22E66EDD2950CB86006094AF /* My Mechanic App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Mechanic App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E66EE02950CB86006094AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22E66EE22950CB86006094AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		22E66EE42950CB86006094AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		22E66EE72950CB86006094AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22E66EE92950CB87006094AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22E66EEC2950CB87006094AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +58,12 @@
 		22E66F032950CB88006094AF /* My_Mechanic_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Mechanic_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8E7665E02966770C001846A8 /* Settings Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Settings Screen.storyboard"; sourceTree = "<group>"; };
 		8E7665E229667717001846A8 /* About Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "About Screen.storyboard"; sourceTree = "<group>"; };
+		8E7665E729674F28001846A8 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		8E7665E929675FDC001846A8 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		8E7665EB29676227001846A8 /* CarsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsData.swift; sourceTree = "<group>"; };
+		8E7665EF296772ED001846A8 /* MyCarsMainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarsMainScreenViewController.swift; sourceTree = "<group>"; };
+		8EB6F5842967863E00B3269F /* MyCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarTableViewCell.swift; sourceTree = "<group>"; };
+		8EB6F5852967863E00B3269F /* MyCarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCarTableViewCell.xib; sourceTree = "<group>"; };
 		8ECFD253296669C8004BADB1 /* MyCars Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "MyCars Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +119,7 @@
 				8ECFD24E296666B5004BADB1 /* Screen Views (Storyboards) */,
 				8ECFD25029666753004BADB1 /* Controllers */,
 				8ECFD251296667A9004BADB1 /* Models */,
+				8EB6F583296785C100B3269F /* Other Components */,
 				22E66EE02950CB86006094AF /* AppDelegate.swift */,
 				22E66EE22950CB86006094AF /* SceneDelegate.swift */,
 				22E66EE92950CB87006094AF /* Assets.xcassets */,
@@ -137,6 +148,7 @@
 		8E7665E42966811E001846A8 /* MyCars Screen Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E7665EF296772ED001846A8 /* MyCarsMainScreenViewController.swift */,
 			);
 			path = "MyCars Screen Controllers";
 			sourceTree = "<group>";
@@ -155,6 +167,15 @@
 			path = "About Screen Controllers";
 			sourceTree = "<group>";
 		};
+		8EB6F583296785C100B3269F /* Other Components */ = {
+			isa = PBXGroup;
+			children = (
+				8EB6F5842967863E00B3269F /* MyCarTableViewCell.swift */,
+				8EB6F5852967863E00B3269F /* MyCarTableViewCell.xib */,
+			);
+			path = "Other Components";
+			sourceTree = "<group>";
+		};
 		8ECFD24E296666B5004BADB1 /* Screen Views (Storyboards) */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +191,6 @@
 		8ECFD25029666753004BADB1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				22E66EE42950CB86006094AF /* ViewController.swift */,
 				8E7665E42966811E001846A8 /* MyCars Screen Controllers */,
 				8E7665E529668135001846A8 /* Settings Screen Controllers */,
 				8E7665E629668146001846A8 /* About Screen Controllers */,
@@ -181,6 +201,8 @@
 		8ECFD251296667A9004BADB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8E7665E729674F28001846A8 /* Car.swift */,
+				8E7665E929675FDC001846A8 /* Service.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +210,7 @@
 		8ECFD252296667DC004BADB1 /* Globals */ = {
 			isa = PBXGroup;
 			children = (
+				8E7665EB29676227001846A8 /* CarsData.swift */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -298,6 +321,7 @@
 			files = (
 				22E66EED2950CB87006094AF /* LaunchScreen.storyboard in Resources */,
 				8ECFD254296669C8004BADB1 /* MyCars Screen.storyboard in Resources */,
+				8EB6F5872967863F00B3269F /* MyCarTableViewCell.xib in Resources */,
 				22E66EEA2950CB87006094AF /* Assets.xcassets in Resources */,
 				8E7665E329667717001846A8 /* About Screen.storyboard in Resources */,
 				22E66EE82950CB86006094AF /* Main.storyboard in Resources */,
@@ -326,8 +350,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E66EE52950CB86006094AF /* ViewController.swift in Sources */,
 				22E66EE12950CB86006094AF /* AppDelegate.swift in Sources */,
+				8E7665F0296772ED001846A8 /* MyCarsMainScreenViewController.swift in Sources */,
+				8EB6F5862967863E00B3269F /* MyCarTableViewCell.swift in Sources */,
+				8E7665EA29675FDC001846A8 /* Service.swift in Sources */,
+				8E7665E829674F28001846A8 /* Car.swift in Sources */,
+				8E7665EC29676227001846A8 /* CarsData.swift in Sources */,
 				22E66EE32950CB86006094AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
