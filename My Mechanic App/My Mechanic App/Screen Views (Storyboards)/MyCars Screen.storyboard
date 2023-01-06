@@ -27,20 +27,42 @@
         <!--My Cars-->
         <scene sceneID="QE7-I5-16F">
             <objects>
-                <viewController id="ibD-pc-d5s" sceneMemberID="viewController">
+                <viewController id="ibD-pc-d5s" customClass="MyCarsMainScreenViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9rr-tu-nrJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="drF-26-TJb">
+                                <rect key="frame" x="0.0" y="155" width="393" height="614"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eSd-dO-DFs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eSd-dO-DFs" firstAttribute="trailing" secondItem="drF-26-TJb" secondAttribute="trailing" id="047-Tz-De0"/>
+                            <constraint firstItem="drF-26-TJb" firstAttribute="leading" secondItem="eSd-dO-DFs" secondAttribute="leading" id="CJA-7F-je5"/>
+                            <constraint firstItem="eSd-dO-DFs" firstAttribute="bottom" secondItem="drF-26-TJb" secondAttribute="bottom" id="NJc-mq-6uw"/>
+                            <constraint firstItem="drF-26-TJb" firstAttribute="top" secondItem="eSd-dO-DFs" secondAttribute="top" id="dkf-vP-Nlt"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Cars" image="car" catalog="system" id="75w-wc-pDP"/>
-                    <navigationItem key="navigationItem" title="My Cars" id="1pI-vd-tFO"/>
+                    <navigationItem key="navigationItem" title="My Cars" id="1pI-vd-tFO">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="0Tx-OV-eb2">
+                            <connections>
+                                <action selector="editBtn:" destination="ibD-pc-d5s" id="XPo-Is-YHN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myCarsTableView" destination="drF-26-TJb" id="PgO-Hj-gGy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZxC-Fh-TQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-950" y="123"/>
+            <point key="canvasLocation" x="-950.38167938931292" y="122.53521126760565"/>
         </scene>
     </scenes>
     <resources>
