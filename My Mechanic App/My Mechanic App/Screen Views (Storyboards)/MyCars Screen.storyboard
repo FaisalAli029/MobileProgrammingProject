@@ -49,14 +49,22 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Cars" image="car" catalog="system" id="75w-wc-pDP"/>
                     <navigationItem key="navigationItem" title="My Cars" id="1pI-vd-tFO">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="0Tx-OV-eb2">
-                            <connections>
-                                <action selector="editBtn:" destination="ibD-pc-d5s" id="XPo-Is-YHN"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Edit" id="0Tx-OV-eb2">
+                                <connections>
+                                    <action selector="editBtn:" destination="ibD-pc-d5s" id="XPo-Is-YHN"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="BBF-K7-xXU">
+                                <connections>
+                                    <action selector="addCarBtn:" destination="ibD-pc-d5s" id="Ta5-Be-bVu"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addBtn" destination="BBF-K7-xXU" id="KGY-P6-Vue"/>
                         <outlet property="myCarsTableView" destination="drF-26-TJb" id="PgO-Hj-gGy"/>
                     </connections>
                 </viewController>

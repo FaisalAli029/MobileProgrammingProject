@@ -3,10 +3,16 @@ import UIKit
 class MyCarsMainScreenViewController: UIViewController {
 
     @IBOutlet weak var myCarsTableView: UITableView!
+    @IBOutlet weak var addBtn: UIBarButtonItem!
     
     @IBAction func editBtn(_ sender: UIBarButtonItem) {
         myCarsTableView.isEditing = !myCarsTableView.isEditing
         sender.title = myCarsTableView.isEditing ? "Done" : "Edit"
+        addBtn.isHidden = myCarsTableView.isEditing ? true : false
+    }
+    
+    @IBAction func addCarBtn(_ sender: UIBarButtonItem) {
+        print("car added")
     }
     
     // List to display 'MyCars'
