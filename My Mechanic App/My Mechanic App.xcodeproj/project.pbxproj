@@ -371,6 +371,7 @@
 				8B3FB9C9296B03E0000AD0ED /* ServiceTableViewCell.swift in Sources */,
 				8E7665F0296772ED001846A8 /* MyCarsMainScreenViewController.swift in Sources */,
 				8EB6F5862967863E00B3269F /* MyCarTableViewCell.swift in Sources */,
+				8E1FFFA32968C2B8001D184E /* MyCarsAddCarViewController.swift in Sources */,
 				8E7665EA29675FDC001846A8 /* Service.swift in Sources */,
 				8B3FB9CE296B0577000AD0ED /* ServiceDetailsViewController.swift in Sources */,
 				8E7665E829674F28001846A8 /* Car.swift in Sources */,
