@@ -131,7 +131,7 @@
 				8ECFD24E296666B5004BADB1 /* Screen Views (Storyboards) */,
 				8ECFD25029666753004BADB1 /* Controllers */,
 				8ECFD251296667A9004BADB1 /* Models */,
-				8EB6F583296785C100B3269F /* Other Components */,
+				8EB6F583296785C100B3269F /* Custom Table View Cells */,
 				22E66EE02950CB86006094AF /* AppDelegate.swift */,
 				22E66EE22950CB86006094AF /* SceneDelegate.swift */,
 				22E66EE92950CB87006094AF /* Assets.xcassets */,
@@ -182,7 +182,7 @@
 			path = "About Screen Controllers";
 			sourceTree = "<group>";
 		};
-		8EB6F583296785C100B3269F /* Other Components */ = {
+		8EB6F583296785C100B3269F /* Custom Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
 				8EB6F5842967863E00B3269F /* MyCarTableViewCell.swift */,
@@ -190,7 +190,7 @@
 				8B3FB9C7296B03E0000AD0ED /* ServiceTableViewCell.swift */,
 				8B3FB9C8296B03E0000AD0ED /* ServiceTableViewCell.xib */,
 			);
-			path = "Other Components";
+			path = "Custom Table View Cells";
 			sourceTree = "<group>";
 		};
 		8ECFD24E296666B5004BADB1 /* Screen Views (Storyboards) */ = {
