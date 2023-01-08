@@ -60,17 +60,14 @@
                                     <action selector="addCarBtn:" destination="ibD-pc-d5s" id="Ta5-Be-bVu"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="wrench" catalog="system" id="TJ6-AY-NSj">
-                                <connections>
-                                    <segue destination="WwB-WU-N9s" kind="show" id="W1R-MP-pNM"/>
-                                </connections>
-                            </barButtonItem>
+                            <barButtonItem image="wrench" catalog="system" id="TJ6-AY-NSj"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addBtn" destination="BBF-K7-xXU" id="KGY-P6-Vue"/>
                         <outlet property="myCarsTableView" destination="drF-26-TJb" id="PgO-Hj-gGy"/>
+                        <segue destination="qO3-B6-BN2" kind="show" identifier="showServices" id="373-gN-5Ln"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZxC-Fh-TQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -78,14 +75,14 @@
             <point key="canvasLocation" x="-792" y="123"/>
         </scene>
         <!--servicesList-->
-        <scene sceneID="ccu-10-eND">
+        <scene sceneID="PVP-F5-1CV">
             <objects>
-                <viewControllerPlaceholder storyboardName="Services Screen" referencedIdentifier="servicesList" id="WwB-WU-N9s" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="YSQ-5h-rer"/>
+                <viewControllerPlaceholder storyboardName="Services Screen" referencedIdentifier="servicesList" id="qO3-B6-BN2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aDG-pb-OjI"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="POI-cl-Pmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csI-BT-Nne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-103" y="266"/>
+            <point key="canvasLocation" x="-75" y="157"/>
         </scene>
     </scenes>
     <resources>
