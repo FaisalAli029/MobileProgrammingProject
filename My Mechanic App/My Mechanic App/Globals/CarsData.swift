@@ -2,7 +2,7 @@ import Foundation
 
 let dateFormatter = DateFormatter()
 
-let carsData: [Car] = [
+var carsData: [Car] = [
     Car(
         manufacturer: "Toyota",
         model: "Corolla",
