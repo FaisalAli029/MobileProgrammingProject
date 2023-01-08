@@ -1,18 +1,11 @@
-//
-//  ServiceTableView.swift
-//  Services
-//
-//  Created by M.A on 07/01/2022.
-//
-
 import Foundation
 import UIKit
 import CoreData
 
-var serviceList = [Service]() //declare a public array - Omar Alshams
-
-class ServicesMainScreenViewController: UITableViewController
-{
+class ServicesMainScreenViewController: UITableViewController {
+    
+    var servicesList: [Service] = []
+    
 //    var firstLoad = true
 //    func nonDeletedServices() -> [Service]
 //    { //view the list of non deleted services from an array
@@ -28,6 +21,23 @@ class ServicesMainScreenViewController: UITableViewController
 //    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(servicesList)
+        
+        print("")
+        var counter: Int = 1
+        for service in servicesList {
+            print("Service #\(counter)")
+            print("========")
+            print(service.title)
+            print(service.date)
+            print(service.serviceMileage)
+            print(service.serviceCost)
+            print("")
+            
+            counter += 1
+        }
+        
 //        if(firstLoad)
 //        {
 //            //function to view the list of services from the memory(CoreData) into the table view cells - Omar Alshams
@@ -48,6 +58,7 @@ class ServicesMainScreenViewController: UITableViewController
 //            }
 //        }
     }
+    
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //Omar Alshams feature
 //        let serviceCell = tableView.dequeueReusableCell(withIdentifier: "serviceCellID", for: indexPath) as! ServiceCell //declare table view cell with an identifier(identifier is placed in Main storyboard) - Omar Alshams
 //        

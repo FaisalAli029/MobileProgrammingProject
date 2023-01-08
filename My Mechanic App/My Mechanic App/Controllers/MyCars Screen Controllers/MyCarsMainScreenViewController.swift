@@ -11,12 +11,11 @@ class MyCarsMainScreenViewController: UIViewController {
         addBtn.isHidden = myCarsTableView.isEditing ? true : false
     }
     
-    @IBAction func addCarBtn(_ sender: UIBarButtonItem) {
-        print("car added")
-    }
-    
     // List to display 'MyCars'
     var myCarsList = carsData
+    
+    // Will be passed to the 'View Car Details' screen
+    var selectedCar: Car?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +25,18 @@ class MyCarsMainScreenViewController: UIViewController {
         myCarsTableView.register(nib, forCellReuseIdentifier: "carCell")
         myCarsTableView.delegate = self
         myCarsTableView.dataSource = self
+    }
+    
+    // Temporarily stores information unitl a button (usually) is clicked
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // When the user clicks on any of the car rows
+        if segue.identifier == "showCarDetails" {
+            if let vc = segue.destination as? MyCarViewCarDetailsViewController {
+                // The variable [carDetails] in the 'MyCarViewCarDetailsViewController' will be set to the following
+                vc.carDetails = selectedCar
+            }
+        }
     }
 }
 
@@ -54,7 +65,7 @@ extension MyCarsMainScreenViewController: UITableViewDelegate, UITableViewDataSo
     
     // On Cell Selection
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("you have selected a cell. index = \(indexPath.row)")
+        selectedCar = myCarsList[indexPath.row]
         self.performSegue(withIdentifier: "showCarDetails", sender: self)
     }
     
