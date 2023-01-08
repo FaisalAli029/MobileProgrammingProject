@@ -21,6 +21,7 @@
 		8B3FB9CE296B0577000AD0ED /* ServiceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FB9CD296B0577000AD0ED /* ServiceDetailsViewController.swift */; };
 		8B3FB9D0296B0705000AD0ED /* Services Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3FB9CF296B0705000AD0ED /* Services Screen.storyboard */; };
 		8B84E248296B260A004538B6 /* MyCarsAddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84E247296B260A004538B6 /* MyCarsAddCarViewController.swift */; };
+		8E42DF20296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42DF1F296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift */; };
 		8E7665E12966770C001846A8 /* Settings Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E02966770C001846A8 /* Settings Screen.storyboard */; };
 		8E7665E329667717001846A8 /* About Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E229667717001846A8 /* About Screen.storyboard */; };
 		8E7665E829674F28001846A8 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7665E729674F28001846A8 /* Car.swift */; };
@@ -68,6 +69,7 @@
 		8B3FB9CD296B0577000AD0ED /* ServiceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewController.swift; sourceTree = "<group>"; };
 		8B3FB9CF296B0705000AD0ED /* Services Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Services Screen.storyboard"; sourceTree = "<group>"; };
 		8B84E247296B260A004538B6 /* MyCarsAddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarsAddCarViewController.swift; sourceTree = "<group>"; };
+		8E42DF1F296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarViewCarDetailsViewController.swift; sourceTree = "<group>"; };
 		8E7665E02966770C001846A8 /* Settings Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Settings Screen.storyboard"; sourceTree = "<group>"; };
 		8E7665E229667717001846A8 /* About Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "About Screen.storyboard"; sourceTree = "<group>"; };
 		8E7665E729674F28001846A8 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				8E7665EF296772ED001846A8 /* MyCarsMainScreenViewController.swift */,
 				8B84E247296B260A004538B6 /* MyCarsAddCarViewController.swift */,
+				8E42DF1F296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift */,
 			);
 			path = "MyCars Screen Controllers";
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E42DF20296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift in Sources */,
 				8B84E248296B260A004538B6 /* MyCarsAddCarViewController.swift in Sources */,
 				22E66EE12950CB86006094AF /* AppDelegate.swift in Sources */,
 				8B3FB9C9296B03E0000AD0ED /* ServiceTableViewCell.swift in Sources */,

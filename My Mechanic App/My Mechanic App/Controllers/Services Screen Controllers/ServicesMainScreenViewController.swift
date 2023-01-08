@@ -11,7 +11,7 @@ import CoreData
 
 var serviceList = [Service]() //declare a public array - Omar Alshams
 
-class ServiceTableView: UITableViewController
+class ServicesMainScreenViewController: UITableViewController
 {
 //    var firstLoad = true
 //    func nonDeletedServices() -> [Service]

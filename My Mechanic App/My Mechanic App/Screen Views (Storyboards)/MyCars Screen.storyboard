@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,12 +67,42 @@
                     <connections>
                         <outlet property="addBtn" destination="BBF-K7-xXU" id="KGY-P6-Vue"/>
                         <outlet property="myCarsTableView" destination="drF-26-TJb" id="PgO-Hj-gGy"/>
-                        <segue destination="qO3-B6-BN2" kind="show" identifier="showServices" id="373-gN-5Ln"/>
+                        <segue destination="R9s-PT-nYg" kind="show" identifier="showCarDetails" id="h9U-C1-HM8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZxC-Fh-TQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-792" y="123"/>
+        </scene>
+        <!--My Car View Car Details View Controller-->
+        <scene sceneID="M9X-Xu-o9M">
+            <objects>
+                <viewController id="R9s-PT-nYg" customClass="MyCarViewCarDetailsViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XYw-NG-JgC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xd-8Q-pZw">
+                                <rect key="frame" x="123" y="384" width="147" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="View Services" buttonSize="large"/>
+                                <connections>
+                                    <action selector="viewServicesBtnClicked:" destination="R9s-PT-nYg" eventType="touchUpInside" id="rKl-wf-B2D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kjT-sO-I4m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b0C-E8-fNI"/>
+                    <connections>
+                        <segue destination="qO3-B6-BN2" kind="show" identifier="showServices" id="QVj-dA-lZm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMk-wi-Sqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402" y="532"/>
         </scene>
         <!--servicesList-->
         <scene sceneID="PVP-F5-1CV">
@@ -82,7 +112,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csI-BT-Nne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-205" y="296"/>
+            <point key="canvasLocation" x="1192" y="532"/>
         </scene>
         <!--My Cars Add Car View Controller-->
         <scene sceneID="uPL-lR-FQ2">
@@ -261,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxf-mx-mYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="123"/>
+            <point key="canvasLocation" x="401" y="-215"/>
         </scene>
     </scenes>
     <resources>

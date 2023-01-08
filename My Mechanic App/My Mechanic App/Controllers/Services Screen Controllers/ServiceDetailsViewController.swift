@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ServiceDetailVC: UIViewController, UITextFieldDelegate {
+class ServiceDetailsViewController: UIViewController, UITextFieldDelegate {
     //create outlets for the text fields
 //    @IBOutlet weak var titleTF: UITextField!
 //    @IBOutlet weak var dateTF: UITextField!

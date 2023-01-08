@@ -1,67 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Services-->
-        <scene sceneID="VpN-a6-iFQ">
+        <scene sceneID="YWf-fm-Htf">
             <objects>
-                <tableViewController id="CGp-tN-Rzs" customClass="ServicesMainScreenViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Hx2-Cn-NKe">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                <tableViewController id="nKY-E9-gZ0" customClass="ServicesMainScreenViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="k7J-zi-CGO">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <connections>
-                            <outlet property="dataSource" destination="CGp-tN-Rzs" id="Oge-6r-s8Y"/>
-                            <outlet property="delegate" destination="CGp-tN-Rzs" id="UF7-9T-Kn5"/>
+                            <outlet property="dataSource" destination="nKY-E9-gZ0" id="EXa-dZ-nGR"/>
+                            <outlet property="delegate" destination="nKY-E9-gZ0" id="zpd-P4-Nz7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Services" largeTitleDisplayMode="always" id="RiV-Bk-dA7">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Uai-Un-Lb4">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="j2a-NF-Tki">
-                                <rect key="frame" x="327" y="5" width="47" height="34.333333333333336"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="plus" catalog="system"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Services" id="FSo-s6-sbS"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f2l-Qt-Wd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EFl-f9-jRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="613.50710900473928"/>
+            <point key="canvasLocation" x="1627" y="612"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0XV-Qg-YAu">
+            <objects>
+                <navigationController storyboardIdentifier="servicesList" id="1MW-w4-nlS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="o9n-rp-vLO">
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nKY-E9-gZ0" kind="relationship" relationship="rootViewController" id="fTL-Gv-8Jf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cKy-Rg-t22" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="612"/>
         </scene>
         <!--Service Details-->
         <scene sceneID="nCk-Sp-gYj">
             <objects>
                 <viewController id="ehZ-8O-Ozh" customClass="ServiceDetailsViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j1q-EG-LWp">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg: oil and filter change" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Mq-ct-o1z">
-                                <rect key="frame" x="125" y="129" width="200" height="35"/>
+                                <rect key="frame" x="145" y="141" width="220" height="87"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder Value" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1qH-B8-Deh">
-                                <rect key="frame" x="125" y="199" width="200" height="33"/>
+                                <rect key="frame" x="145" y="263" width="220" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder Value" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpz-JB-brL">
-                                <rect key="frame" x="125" y="240" width="200" height="35"/>
+                                <rect key="frame" x="145" y="304" width="220" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder Value" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nCC-iW-OLE">
-                                <rect key="frame" x="125" y="309" width="200" height="67"/>
+                                <rect key="frame" x="145" y="373" width="220" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="d40-wm-KTt"/>
                                 </constraints>
@@ -69,16 +75,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TC-tV-mLi">
-                                <rect key="frame" x="30" y="136" width="33" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="MYs-eG-R3a"/>
-                                </constraints>
+                                <rect key="frame" x="30" y="148" width="73" height="73"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlZ-8K-Iuc">
-                                <rect key="frame" x="28.666666666666671" y="205" width="36" height="21"/>
+                                <rect key="frame" x="48.666666666666657" y="269" width="36" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Yt6-Ax-PqF"/>
                                 </constraints>
@@ -87,7 +90,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mileage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnY-Sb-TaZ">
-                                <rect key="frame" x="16.666666666666671" y="247" width="60" height="21"/>
+                                <rect key="frame" x="36.666666666666657" y="311" width="60" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="yvq-An-a44"/>
                                 </constraints>
@@ -96,7 +99,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKo-2p-gfj">
-                                <rect key="frame" x="8" y="315" width="77" height="55"/>
+                                <rect key="frame" x="28" y="379" width="77" height="55"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -168,29 +171,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1P-ok-nsv" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1707.6923076923076" y="612.79620853080564"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Dxv-Vs-l9i">
-            <objects>
-                <navigationController storyboardIdentifier="servicesList" automaticallyAdjustsScrollViewInsets="NO" id="9Ji-UV-XPp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gAu-Oa-wRB">
-                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="CGp-tN-Rzs" kind="relationship" relationship="rootViewController" id="mgX-PO-9IL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZsB-YZ-mJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-69.230769230769226" y="613.50710900473928"/>
+            <point key="canvasLocation" x="2605.1162790697672" y="612.23175965665234"/>
         </scene>
     </scenes>
     <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

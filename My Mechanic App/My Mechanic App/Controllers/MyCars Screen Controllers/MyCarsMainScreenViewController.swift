@@ -55,7 +55,7 @@ extension MyCarsMainScreenViewController: UITableViewDelegate, UITableViewDataSo
     // On Cell Selection
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("you have selected a cell. index = \(indexPath.row)")
-        self.performSegue(withIdentifier: "showServices", sender: self)
+        self.performSegue(withIdentifier: "showCarDetails", sender: self)
     }
     
     // Rows can be edited
