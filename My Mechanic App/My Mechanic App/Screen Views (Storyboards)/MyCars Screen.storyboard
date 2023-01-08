@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,6 +60,11 @@
                                     <action selector="addCarBtn:" destination="ibD-pc-d5s" id="Ta5-Be-bVu"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem image="wrench" catalog="system" id="TJ6-AY-NSj">
+                                <connections>
+                                    <segue destination="WwB-WU-N9s" kind="show" id="W1R-MP-pNM"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -70,11 +75,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZxC-Fh-TQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-950.38167938931292" y="122.53521126760565"/>
+            <point key="canvasLocation" x="-792" y="123"/>
+        </scene>
+        <!--servicesList-->
+        <scene sceneID="ccu-10-eND">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Services Screen" referencedIdentifier="servicesList" id="WwB-WU-N9s" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YSQ-5h-rer"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="POI-cl-Pmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103" y="266"/>
         </scene>
     </scenes>
     <resources>
         <image name="car" catalog="system" width="128" height="95"/>
+        <image name="wrench" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
