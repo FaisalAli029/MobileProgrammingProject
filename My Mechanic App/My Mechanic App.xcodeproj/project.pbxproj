@@ -15,6 +15,7 @@
 		22E66EF82950CB88006094AF /* My_Mechanic_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E66EF72950CB88006094AF /* My_Mechanic_AppTests.swift */; };
 		22E66F022950CB88006094AF /* My_Mechanic_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E66F012950CB88006094AF /* My_Mechanic_AppUITests.swift */; };
 		22E66F042950CB88006094AF /* My_Mechanic_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E66F032950CB88006094AF /* My_Mechanic_AppUITestsLaunchTests.swift */; };
+		8E1FFFA32968C2B8001D184E /* MyCarsAddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FFFA22968C2B8001D184E /* MyCarsAddCarViewController.swift */; };
 		8E7665E12966770C001846A8 /* Settings Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E02966770C001846A8 /* Settings Screen.storyboard */; };
 		8E7665E329667717001846A8 /* About Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E229667717001846A8 /* About Screen.storyboard */; };
 		8E7665E829674F28001846A8 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7665E729674F28001846A8 /* Car.swift */; };
@@ -56,6 +57,7 @@
 		22E66EFD2950CB88006094AF /* My Mechanic AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Mechanic AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E66F012950CB88006094AF /* My_Mechanic_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Mechanic_AppUITests.swift; sourceTree = "<group>"; };
 		22E66F032950CB88006094AF /* My_Mechanic_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Mechanic_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E1FFFA22968C2B8001D184E /* MyCarsAddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarsAddCarViewController.swift; sourceTree = "<group>"; };
 		8E7665E02966770C001846A8 /* Settings Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Settings Screen.storyboard"; sourceTree = "<group>"; };
 		8E7665E229667717001846A8 /* About Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "About Screen.storyboard"; sourceTree = "<group>"; };
 		8E7665E729674F28001846A8 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				8E7665EF296772ED001846A8 /* MyCarsMainScreenViewController.swift */,
+				8E1FFFA22968C2B8001D184E /* MyCarsAddCarViewController.swift */,
 			);
 			path = "MyCars Screen Controllers";
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				22E66EE12950CB86006094AF /* AppDelegate.swift in Sources */,
 				8E7665F0296772ED001846A8 /* MyCarsMainScreenViewController.swift in Sources */,
 				8EB6F5862967863E00B3269F /* MyCarTableViewCell.swift in Sources */,
+				8E1FFFA32968C2B8001D184E /* MyCarsAddCarViewController.swift in Sources */,
 				8E7665EA29675FDC001846A8 /* Service.swift in Sources */,
 				8E7665E829674F28001846A8 /* Car.swift in Sources */,
 				8E7665EC29676227001846A8 /* CarsData.swift in Sources */,
