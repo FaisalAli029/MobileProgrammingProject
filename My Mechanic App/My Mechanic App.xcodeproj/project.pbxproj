@@ -21,6 +21,8 @@
 		8B3FB9CE296B0577000AD0ED /* ServiceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FB9CD296B0577000AD0ED /* ServiceDetailsViewController.swift */; };
 		8B3FB9D0296B0705000AD0ED /* Services Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3FB9CF296B0705000AD0ED /* Services Screen.storyboard */; };
 		8B84E248296B260A004538B6 /* MyCarsAddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84E247296B260A004538B6 /* MyCarsAddCarViewController.swift */; };
+		8E3792C2296C34B000423B7C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3792C1296C34B000423B7C /* ProfileViewController.swift */; };
+		8E3792C4296C512E00423B7C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3792C3296C512E00423B7C /* Person.swift */; };
 		8E7665E12966770C001846A8 /* Settings Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E02966770C001846A8 /* Settings Screen.storyboard */; };
 		8E7665E329667717001846A8 /* About Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E229667717001846A8 /* About Screen.storyboard */; };
 		8E7665E829674F28001846A8 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7665E729674F28001846A8 /* Car.swift */; };
@@ -68,6 +70,8 @@
 		8B3FB9CD296B0577000AD0ED /* ServiceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewController.swift; sourceTree = "<group>"; };
 		8B3FB9CF296B0705000AD0ED /* Services Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Services Screen.storyboard"; sourceTree = "<group>"; };
 		8B84E247296B260A004538B6 /* MyCarsAddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarsAddCarViewController.swift; sourceTree = "<group>"; };
+		8E3792C1296C34B000423B7C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8E3792C3296C512E00423B7C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		8E7665E02966770C001846A8 /* Settings Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Settings Screen.storyboard"; sourceTree = "<group>"; };
 		8E7665E229667717001846A8 /* About Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "About Screen.storyboard"; sourceTree = "<group>"; };
 		8E7665E729674F28001846A8 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
@@ -171,15 +175,9 @@
 		8E7665E529668135001846A8 /* Settings Screen Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8E3792C1296C34B000423B7C /* ProfileViewController.swift */,
 			);
 			path = "Settings Screen Controllers";
-			sourceTree = "<group>";
-		};
-		8E7665E629668146001846A8 /* About Screen Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "About Screen Controllers";
 			sourceTree = "<group>";
 		};
 		8EB6F583296785C100B3269F /* Other Components */ = {
@@ -211,7 +209,6 @@
 			children = (
 				8E7665E42966811E001846A8 /* MyCars Screen Controllers */,
 				8E7665E529668135001846A8 /* Settings Screen Controllers */,
-				8E7665E629668146001846A8 /* About Screen Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -221,6 +218,7 @@
 			children = (
 				8E7665E729674F28001846A8 /* Car.swift */,
 				8E7665E929675FDC001846A8 /* Service.swift */,
+				8E3792C3296C512E00423B7C /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,9 +374,11 @@
 				8E7665F0296772ED001846A8 /* MyCarsMainScreenViewController.swift in Sources */,
 				8EB6F5862967863E00B3269F /* MyCarTableViewCell.swift in Sources */,
 				8E7665EA29675FDC001846A8 /* Service.swift in Sources */,
+				8E3792C2296C34B000423B7C /* ProfileViewController.swift in Sources */,
 				8B3FB9CE296B0577000AD0ED /* ServiceDetailsViewController.swift in Sources */,
 				8E7665E829674F28001846A8 /* Car.swift in Sources */,
 				8E7665EC29676227001846A8 /* CarsData.swift in Sources */,
+				8E3792C4296C512E00423B7C /* Person.swift in Sources */,
 				8B3FB9CC296B0533000AD0ED /* ServicesMainScreenViewController.swift in Sources */,
 				22E66EE32950CB86006094AF /* SceneDelegate.swift in Sources */,
 			);
