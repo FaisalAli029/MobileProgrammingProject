@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="1106" y="-241"/>
         </scene>
-        <!--SettingsScreen-->
+        <!--ProfileScreen-->
         <scene sceneID="CRo-GW-86k">
             <objects>
-                <viewControllerPlaceholder storyboardName="Settings Screen" referencedIdentifier="SettingsScreen" id="9Tw-6W-gqx" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Profile Screen" referencedIdentifier="ProfileScreen" id="9Tw-6W-gqx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="P1x-um-53b"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUW-6N-Bo1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
