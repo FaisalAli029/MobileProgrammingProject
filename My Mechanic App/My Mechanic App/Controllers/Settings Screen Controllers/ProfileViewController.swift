@@ -1,6 +1,6 @@
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var fullNameLabel: UITextField!
     @IBOutlet weak var emailLabel: UITextField!
@@ -24,8 +24,16 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        fullNameLabel.delegate = self
+        emailLabel.delegate = self
+        ageLabel.delegate = self
+        addressLabel.delegate = self
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     /*
     // MARK: - Navigation
