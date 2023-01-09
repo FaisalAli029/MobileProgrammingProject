@@ -142,6 +142,10 @@ extension ServicesMainScreenViewController {
         return true
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 69
+    }
+    
     // Order rows
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let tempData = servicesList[sourceIndexPath.item]
