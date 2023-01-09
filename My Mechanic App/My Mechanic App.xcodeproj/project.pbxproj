@@ -20,6 +20,7 @@
 		8B3FB9CC296B0533000AD0ED /* ServicesMainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FB9CB296B0533000AD0ED /* ServicesMainScreenViewController.swift */; };
 		8B3FB9CE296B0577000AD0ED /* ServiceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FB9CD296B0577000AD0ED /* ServiceDetailsViewController.swift */; };
 		8B3FB9D0296B0705000AD0ED /* Services Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3FB9CF296B0705000AD0ED /* Services Screen.storyboard */; };
+		8B6074D4296C01F500657FCC /* CoreDatas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B6074D2296C01F500657FCC /* CoreDatas.xcdatamodeld */; };
 		8B84E248296B260A004538B6 /* MyCarsAddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84E247296B260A004538B6 /* MyCarsAddCarViewController.swift */; };
 		8E42DF20296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E42DF1F296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift */; };
 		8E7665E12966770C001846A8 /* Settings Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E7665E02966770C001846A8 /* Settings Screen.storyboard */; };
@@ -68,6 +69,7 @@
 		8B3FB9CB296B0533000AD0ED /* ServicesMainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesMainScreenViewController.swift; sourceTree = "<group>"; };
 		8B3FB9CD296B0577000AD0ED /* ServiceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewController.swift; sourceTree = "<group>"; };
 		8B3FB9CF296B0705000AD0ED /* Services Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Services Screen.storyboard"; sourceTree = "<group>"; };
+		8B6074D3296C01F500657FCC /* CoreDatas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDatas.xcdatamodel; sourceTree = "<group>"; };
 		8B84E247296B260A004538B6 /* MyCarsAddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarsAddCarViewController.swift; sourceTree = "<group>"; };
 		8E42DF1F296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarViewCarDetailsViewController.swift; sourceTree = "<group>"; };
 		8E7665E02966770C001846A8 /* Settings Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Settings Screen.storyboard"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				22E66EE22950CB86006094AF /* SceneDelegate.swift */,
 				22E66EE92950CB87006094AF /* Assets.xcassets */,
 				22E66EEE2950CB87006094AF /* Info.plist */,
+				8B6074D2296C01F500657FCC /* CoreDatas.xcdatamodeld */,
 			);
 			path = "My Mechanic App";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6074D4296C01F500657FCC /* CoreDatas.xcdatamodeld in Sources */,
 				8E42DF20296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift in Sources */,
 				8B84E248296B260A004538B6 /* MyCarsAddCarViewController.swift in Sources */,
 				22E66EE12950CB86006094AF /* AppDelegate.swift in Sources */,
@@ -720,6 +724,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8B6074D2296C01F500657FCC /* CoreDatas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B6074D3296C01F500657FCC /* CoreDatas.xcdatamodel */,
+			);
+			currentVersion = 8B6074D3296C01F500657FCC /* CoreDatas.xcdatamodel */;
+			path = CoreDatas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 22E66ED52950CB86006094AF /* Project object */;
 }

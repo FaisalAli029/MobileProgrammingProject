@@ -1,9 +1,15 @@
 import Foundation
 
-struct Service {
-    let id = UUID()
-    var title: String
-    var date: Date
-    var serviceMileage: Double
-    var serviceCost: Double
+import CoreData
+
+@objc(Service)
+class Service: NSManagedObject
+{ //creating NSManaged variables for the entity attributes which acts like container objects(storage)
+    @NSManaged var id: NSNumber!
+    @NSManaged var title: String!
+    @NSManaged var date: String!
+    @NSManaged var mileage: String!
+    @NSManaged var totalCost: String!
+    @NSManaged var deletedService: Date?
+    
 }

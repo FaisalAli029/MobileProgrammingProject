@@ -1,10 +1,10 @@
 import Foundation
 
-let dateFormatter = DateFormatter()
+ let dateFormatter = DateFormatter()
 
-var carsData: [Car] = [
+var carsData: [Cars] = [
     
-    Car(
+    Cars(
         manufacturer: "Toyota",
         model: "Corolla",
         yearManufactured: 1966,
@@ -13,28 +13,28 @@ var carsData: [Car] = [
         mileage: 17263.315,
         cost: 6000.00,
         servicesList: [
-            Service(
-                title: "Oil Change",
-                date: Date(),
-                serviceMileage: 12000,
-                serviceCost: 50
+            Services(
+                titles: "Oil Change",
+                dates: Date(),
+                serviceMileages: 12000,
+                serviceCosts: 50
             ),
-            Service(
-                title: "Filter Change",
-                date: Date(),
-                serviceMileage: 12500,
-                serviceCost: 5
+            Services(
+                titles: "Filter Change",
+                dates: Date(),
+                serviceMileages: 12500,
+                serviceCosts: 5
             ),
-            Service(
-                title: "Tire Change",
-                date: Date(),
-                serviceMileage: 100000,
-                serviceCost: 12
+            Services(
+                titles: "Tire Change",
+                dates: Date(),
+                serviceMileages: 100000,
+                serviceCosts: 12
             ),
         ]
     ),
     
-    Car(
+    Cars(
         manufacturer: "Koenigsegg",
         model: "Jesko",
         yearManufactured: 2022,
@@ -43,28 +43,28 @@ var carsData: [Car] = [
         mileage: 0.0,
         cost: 123456789.00,
         servicesList: [
-            Service(
-                title: "Oil Change",
-                date: Date.now,
-                serviceMileage: 12000,
-                serviceCost: 50
+            Services(
+                titles: "Oil Change",
+                dates: Date.now,
+                serviceMileages: 12000,
+                serviceCosts: 50
             ),
-            Service(
-                title: "Filter Change",
-                date: Date.now,
-                serviceMileage: 12500,
-                serviceCost: 5
+            Services(
+                titles: "Filter Change",
+                dates: Date.now,
+                serviceMileages: 12500,
+                serviceCosts: 5
             ),
-            Service(
-                title: "Tire Change",
-                date: Date.now,
-                serviceMileage: 100000,
-                serviceCost: 12
+            Services(
+                titles: "Tire Change",
+                dates: Date.now,
+                serviceMileages: 100000,
+                serviceCosts: 12
             ),
         ]
     ),
     
-    Car(
+    Cars(
         manufacturer: "Dodge",
         model: "Charger",
         yearManufactured: 1966,
@@ -73,23 +73,23 @@ var carsData: [Car] = [
         mileage: 0.0,
         cost: 12345.00,
         servicesList: [
-            Service(
-                title: "Oil Change",
-                date: Date.now,
-                serviceMileage: 12000,
-                serviceCost: 50
+            Services(
+                titles: "Oil Change",
+                dates: Date.now,
+                serviceMileages: 12000,
+                serviceCosts: 50
             ),
-            Service(
-                title: "Filter Change",
-                date: Date.now,
-                serviceMileage: 12500,
-                serviceCost: 5
+            Services(
+                titles: "Filter Change",
+                dates: Date.now,
+                serviceMileages: 12500,
+                serviceCosts: 5
             ),
-            Service(
-                title: "Tire Change",
-                date: Date.now,
-                serviceMileage: 100000,
-                serviceCost: 12
+            Services(
+                titles: "Tire Change",
+                dates: Date.now,
+                serviceMileages: 100000,
+                serviceCosts: 12
             ),
         ]
     ),
