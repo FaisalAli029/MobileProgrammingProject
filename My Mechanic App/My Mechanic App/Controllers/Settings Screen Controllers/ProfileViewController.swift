@@ -53,7 +53,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         ageLabel.delegate = self
         addressLabel.delegate = self
         
-        // TODO: load user info by decoding
         let documentsDirectory = FileManager.default.urls(
             for: .documentDirectory,
             in: .userDomainMask
@@ -72,7 +71,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
                 from: retrievedUserInfo
            )
         {
-            print(decodedUserInfo)
+            //print(decodedUserInfo)
             fullNameLabel.text = decodedUserInfo.fullName
             emailLabel.text = decodedUserInfo.email
             ageLabel.text = decodedUserInfo.age
