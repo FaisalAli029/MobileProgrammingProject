@@ -88,22 +88,22 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     // On Text Fields Changed
     
     @IBAction func onFullnameChanged(_ sender: UITextField) {
-        print(sender.text!)
+        //print(sender.text!)
         myProfile.fullName = sender.text!
     }
     
     @IBAction func onEmailChanged(_ sender: UITextField) {
-        print(sender.text!)
+        //print(sender.text!)
         myProfile.email = sender.text!
     }
     
     @IBAction func onAgeChanged(_ sender: UITextField) {
-        print(sender.text!)
+        //print(sender.text!)
         myProfile.age = sender.text!
     }
     
     @IBAction func onAddressChanged(_ sender: UITextField) {
-        print(sender.text!)
+        //print(sender.text!)
         myProfile.address = sender.text!
     }
 }
