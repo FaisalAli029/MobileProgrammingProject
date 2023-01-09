@@ -4,9 +4,19 @@ import CoreData
 
 class ServicesMainScreenViewController: UITableViewController {
     
+    @IBOutlet var myServicesTableView: UITableView!
+    @IBOutlet weak var addBtn: UIBarButtonItem!
+    
     var servicesList: [Service] = []
     
-//    var firstLoad = true
+    // When edit button is clicked, it will show hamburger icon to manually sort or delete services
+    @IBAction func editBtnClicked(_ sender: UIBarButtonItem) {
+        myServicesTableView.isEditing = !myServicesTableView.isEditing
+        sender.title = myServicesTableView.isEditing ? "Done" : "Edit"
+        addBtn.isHidden = myServicesTableView.isEditing ? true : false
+    }
+    
+    //    var firstLoad = true
 //    func nonDeletedServices() -> [Service]
 //    { //view the list of non deleted services from an array
 //        var nonDeletedServiceList = [Service]()
@@ -22,8 +32,6 @@ class ServicesMainScreenViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(servicesList)
-        
         print("")
         var counter: Int = 1
         for service in servicesList {
@@ -37,6 +45,11 @@ class ServicesMainScreenViewController: UITableViewController {
             
             counter += 1
         }
+        
+        let nib = UINib(nibName: "ServiceTableViewCell", bundle: nil)
+        myServicesTableView.register(nib, forCellReuseIdentifier: "serviceCell")
+        myServicesTableView.delegate = self
+        myServicesTableView.dataSource = self
         
 //        if(firstLoad)
 //        {
@@ -96,4 +109,54 @@ class ServicesMainScreenViewController: UITableViewController {
 //            tableView.deselectRow(at: indexPath, animated: true)
 //        }
 //    }
+}
+
+// For things related to the table view
+extension ServicesMainScreenViewController {
+    
+    // Total number of rows
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        servicesList.count
+    }
+    
+    // Shows cell data and removes other cells from memory if they are NOT visible
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = myServicesTableView.dequeueReusableCell(
+            withIdentifier: "serviceCell",
+            for: indexPath
+        ) as! ServiceTableViewCell
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        cell.title.text = servicesList[indexPath.row].title
+        cell.date.text = dateFormatter.string(from: servicesList[indexPath.row].date)
+        
+        print("rewhe \(dateFormatter.string(from: servicesList[indexPath.row].date))")
+        
+        return cell
+    }
+    
+    // Rows can be edited
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    // Order rows
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let tempData = servicesList[sourceIndexPath.item]
+        servicesList.remove(at: sourceIndexPath.item)
+        servicesList.insert(tempData, at: destinationIndexPath.item)
+    }
+    
+    // Delete or insert data
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            servicesList.remove(at: indexPath.row)
+            myServicesTableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // do nothing
+        }
+    }
 }

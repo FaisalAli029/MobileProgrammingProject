@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="serviceCell" rowHeight="70" id="KGk-i7-Jjw" customClass="ServiceTableViewCell" customModule="My_Mechanic_App" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="serviceCell" rowHeight="74" id="KGk-i7-Jjw" customClass="ServiceTableViewCell" customModule="My_Mechanic_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="ServiceTableViewCell" customModule="My_Mechanic_App" customModuleProvider="target">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;service_title&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91T-94-fgj">
@@ -33,13 +33,18 @@
                     <constraint firstItem="E7E-aj-e7M" firstAttribute="top" secondItem="91T-94-fgj" secondAttribute="bottom" constant="6" id="3Hl-zb-6lD"/>
                     <constraint firstAttribute="trailing" secondItem="91T-94-fgj" secondAttribute="trailing" constant="24" id="8v2-bY-10J"/>
                     <constraint firstItem="91T-94-fgj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="L0E-I3-K59"/>
+                    <constraint firstAttribute="bottom" secondItem="E7E-aj-e7M" secondAttribute="bottom" constant="13" id="Zee-1i-vKM"/>
                     <constraint firstItem="E7E-aj-e7M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="b3b-Va-ndP"/>
                     <constraint firstItem="91T-94-fgj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="d0v-A2-mWp"/>
                     <constraint firstAttribute="trailing" secondItem="E7E-aj-e7M" secondAttribute="trailing" constant="24" id="ohj-sR-wr2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="101.53846153846153" y="29.857819905213269"/>
+            <connections>
+                <outlet property="date" destination="E7E-aj-e7M" id="cC6-UF-jfV"/>
+                <outlet property="title" destination="91T-94-fgj" id="ICh-0w-YgQ"/>
+            </connections>
+            <point key="canvasLocation" x="101.53846153846153" y="31.279620853080566"/>
         </tableViewCell>
     </objects>
 </document>

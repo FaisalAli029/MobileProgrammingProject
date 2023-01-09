@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Services-->
+        <!--My Services-->
         <scene sceneID="YWf-fm-Htf">
             <objects>
                 <tableViewController storyboardIdentifier="servicesList" id="nKY-E9-gZ0" customClass="ServicesMainScreenViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,11 +21,24 @@
                             <outlet property="delegate" destination="nKY-E9-gZ0" id="zpd-P4-Nz7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Services" largeTitleDisplayMode="always" id="FSo-s6-sbS"/>
+                    <navigationItem key="navigationItem" title="My Services" largeTitleDisplayMode="always" id="FSo-s6-sbS">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Edit" id="aBr-Kh-vqw">
+                                <connections>
+                                    <action selector="editBtnClicked:" destination="nKY-E9-gZ0" id="kBL-dJ-bbS"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="plus" catalog="system" id="Dcy-Gk-y8p"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addBtn" destination="Dcy-Gk-y8p" id="rHQ-Zf-EGB"/>
+                        <outlet property="myServicesTableView" destination="k7J-zi-CGO" id="8Wk-EE-bsj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFl-f9-jRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3318.1395348837209" y="611.58798283261808"/>
+            <point key="canvasLocation" x="4216.7441860465115" y="611.58798283261808"/>
         </scene>
         <!--Service Details-->
         <scene sceneID="nCk-Sp-gYj">
@@ -136,7 +149,7 @@
                     <navigationItem key="navigationItem" title="Service Details" id="fYj-Yy-qgM">
                         <barButtonItem key="rightBarButtonItem" id="eUM-Iy-odk">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="rQM-uL-u4z">
-                                <rect key="frame" x="313" y="5" width="61" height="34.333333333333336"/>
+                                <rect key="frame" x="349" y="5" width="61" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
@@ -155,28 +168,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1P-ok-nsv" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4400.9302325581393" y="611.58798283261808"/>
+            <point key="canvasLocation" x="5279" y="612"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="mA3-HU-dFM">
+        <scene sceneID="LDk-wH-hvI">
             <objects>
-                <navigationController storyboardIdentifier="servicesListNav" automaticallyAdjustsScrollViewInsets="NO" id="GYE-Qk-Peo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="servicesListNav" automaticallyAdjustsScrollViewInsets="NO" id="VBV-Jc-D1w" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="onk-3S-7Xv">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zUJ-j3-R9A">
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="nKY-E9-gZ0" kind="relationship" relationship="rootViewController" id="VC9-nD-m3u"/>
+                        <segue destination="nKY-E9-gZ0" kind="relationship" relationship="rootViewController" id="Gc9-az-S3N"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ijo-ow-h07" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ca-53-VTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2419.5348837209303" y="611.58798283261808"/>
+            <point key="canvasLocation" x="3318.1395348837209" y="611.58798283261808"/>
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
