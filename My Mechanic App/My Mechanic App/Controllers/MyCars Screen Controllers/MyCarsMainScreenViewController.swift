@@ -12,7 +12,7 @@ class MyCarsMainScreenViewController: UIViewController {
     }
     
     // List to display 'MyCars'
-    var myCarsList = carsData
+    var myCarsList = myCarsData
     
     // Will be passed to the 'View Car Details' screen
     var selectedCar: Car?
@@ -25,7 +25,20 @@ class MyCarsMainScreenViewController: UIViewController {
         myCarsTableView.register(nib, forCellReuseIdentifier: "carCell")
         myCarsTableView.delegate = self
         myCarsTableView.dataSource = self
+        
+        // Load Car(s) data from local storage
+        myCarsList = readCarsData()
     }
+    
+    // When user is redirected to this screen from any other screen like: 'Add Car' screen
+    // the table data should be updated (reloaded)
+    override func viewWillAppear(_ animated: Bool) {
+        myCarsTableView.reloadData()
+        myCarsData = myCarsList
+    }
+    
+    // When user adds a new car, the user will be redirected from the 'add car' screen to here with the updated cars list
+    @IBAction func unwindToMyCarsScreen(_ sender: UIStoryboardSegue) {}
     
     // Temporarily stores information unitl a button (usually) is clicked
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,6 +50,8 @@ class MyCarsMainScreenViewController: UIViewController {
                 vc.carDetails = selectedCar
             }
         }
+        
+        myCarsData = myCarsList // Updates the GLOBAL MyCars List
     }
 }
 
@@ -44,7 +59,7 @@ extension MyCarsMainScreenViewController: UITableViewDelegate, UITableViewDataSo
     
     // Total number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        myCarsList.count
+        return myCarsList.count
     }
     
     // Shows cell data and removes other cells from memory if they are NOT visible
@@ -79,6 +94,9 @@ extension MyCarsMainScreenViewController: UITableViewDelegate, UITableViewDataSo
         let tempData = myCarsList[sourceIndexPath.item]
         myCarsList.remove(at: sourceIndexPath.item)
         myCarsList.insert(tempData, at: destinationIndexPath.item)
+        
+        updateCarsListStored(carsList: myCarsList)
+        myCarsTableView.reloadData()
     }
     
     // Delete or insert data
@@ -87,6 +105,9 @@ extension MyCarsMainScreenViewController: UITableViewDelegate, UITableViewDataSo
         if editingStyle == .delete {
             myCarsList.remove(at: indexPath.row)
             myCarsTableView.deleteRows(at: [indexPath], with: .fade)
+            
+            updateCarsListStored(carsList: myCarsList)
+            myCarsTableView.reloadData()
         } else if editingStyle == .insert {
             // do nothing
         }

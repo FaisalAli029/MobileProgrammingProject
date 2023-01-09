@@ -418,6 +418,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title=" Add Car" buttonSize="large"/>
                                 <connections>
                                     <action selector="addCarBtn:" destination="E6s-nP-EDP" eventType="touchUpInside" id="Zg2-Ue-bKZ"/>
+                                    <segue destination="AiZ-NX-xbq" kind="unwind" unwindAction="unwindToMyCarsScreen:" id="fZw-Ji-sYQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -443,6 +444,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxf-mx-mYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="AiZ-NX-xbq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="401" y="-215"/>
         </scene>

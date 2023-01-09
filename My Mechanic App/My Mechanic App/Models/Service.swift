@@ -1,7 +1,7 @@
 import Foundation
 
-struct Service {
-    let id = UUID()
+struct Service: Codable {
+    var id = UUID()
     var title: String
     var date: Date
     var serviceMileage: Double
