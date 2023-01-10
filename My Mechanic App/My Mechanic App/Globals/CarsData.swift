@@ -5,3 +5,4 @@ var dateFormatter = DateFormatter()
 
 var myCarsData: [Car] = []
 var selectedCarIndex: Int = 0
+var selectedServiceIndex: Int = 0

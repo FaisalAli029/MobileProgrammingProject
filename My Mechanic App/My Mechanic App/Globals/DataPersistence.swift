@@ -83,6 +83,31 @@ func updateCarsListStored(carsList: [Car]) {
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
 
+// Updates a single Car
+func updateCar(newCar: Car) {
+    myCarsData[selectedCarIndex].manufacturer = newCar.manufacturer
+    myCarsData[selectedCarIndex].model = newCar.model
+    myCarsData[selectedCarIndex].yearManufactured = newCar.yearManufactured
+    myCarsData[selectedCarIndex].engine = newCar.engine
+    myCarsData[selectedCarIndex].licensePlate = newCar.licensePlate
+    myCarsData[selectedCarIndex].mileage = newCar.mileage
+    myCarsData[selectedCarIndex].cost = newCar.cost
+    
+    let documentsDirectory = FileManager.default.urls(
+        for: .documentDirectory,
+        in: .userDomainMask
+    ).first!
+
+    let archiveURL = documentsDirectory
+        .appendingPathComponent(carFileName)
+        .appendingPathExtension("plist")
+
+    let propertyListEncoder = PropertyListEncoder()
+
+    let encodedData = try? propertyListEncoder.encode(myCarsData)
+    try? encodedData?.write(to: archiveURL, options: .noFileProtection)
+}
+
 
 
 // [[ MANAGING SERVICES ]]
@@ -121,6 +146,28 @@ func updateSerivcesListStored(servicesList: [Service]) {
     
     let propertyListEncoder = PropertyListEncoder()
     
+    let encodedData = try? propertyListEncoder.encode(myCarsData)
+    try? encodedData?.write(to: archiveURL, options: .noFileProtection)
+}
+
+// Updates a single service
+func updateService(newService: Service) {
+    myCarsData[selectedCarIndex].servicesList[selectedServiceIndex].title = newService.title
+    myCarsData[selectedCarIndex].servicesList[selectedServiceIndex].date = newService.date
+    myCarsData[selectedCarIndex].servicesList[selectedServiceIndex].serviceMileage = newService.serviceMileage
+    myCarsData[selectedCarIndex].servicesList[selectedServiceIndex].serviceCost = newService.serviceCost
+    
+    let documentsDirectory = FileManager.default.urls(
+        for: .documentDirectory,
+        in: .userDomainMask
+    ).first!
+
+    let archiveURL = documentsDirectory
+        .appendingPathComponent(carFileName)
+        .appendingPathExtension("plist")
+
+    let propertyListEncoder = PropertyListEncoder()
+
     let encodedData = try? propertyListEncoder.encode(myCarsData)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }

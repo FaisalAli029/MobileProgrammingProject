@@ -21,22 +21,18 @@ class ServicesMainScreenViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        servicesList = myCarsData[selectedCarIndex].servicesList
-        
-        print("")
-        var counter: Int = 1
-        for service in servicesList {
-            print("Service #\(counter)")
-            print("========")
-            print(service.title)
-            print(service.date)
-            print(service.serviceMileage)
-            print(service.serviceCost)
-            print("")
-            
-            counter += 1
-        }
+        //print("")
+        //var counter: Int = 1
+        //for service in servicesList {
+        //    print("Service #\(counter)")
+        //    print("========")
+        //    print(service.title)
+        //    print(service.date)
+        //    print(service.serviceMileage)
+        //    print(service.serviceCost)
+        //    print("")
+        //    counter += 1
+        //}
         
         let nib = UINib(nibName: "ServiceTableViewCell", bundle: nil)
         myServicesTableView.register(nib, forCellReuseIdentifier: "serviceCell")
@@ -45,6 +41,7 @@ class ServicesMainScreenViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        servicesList = myCarsData[selectedCarIndex].servicesList
         myServicesTableView.reloadData()
     }
 }
@@ -72,11 +69,17 @@ extension ServicesMainScreenViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedServiceIndex = indexPath.row
+        performSegue(withIdentifier: "showServiceDetails", sender: self)
+    }
+    
     // Rows can be edited
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
+    // Row height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 69
     }

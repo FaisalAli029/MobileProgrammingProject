@@ -240,7 +240,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="b0C-E8-fNI">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Tco-IW-FfY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Tco-IW-FfY">
+                            <connections>
+                                <action selector="onEditBtnClicked:" destination="R9s-PT-nYg" id="HgX-8C-o28"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="costTF" destination="Qgn-V0-wNt" id="vLJ-wH-b56"/>

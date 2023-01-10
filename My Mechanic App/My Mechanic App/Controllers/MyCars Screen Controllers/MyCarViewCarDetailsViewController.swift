@@ -1,10 +1,6 @@
 import UIKit
 
 class MyCarViewCarDetailsViewController: UIViewController {
-    
-    // The car details that has been passed
-    var carDetails: Car?
-    
     @IBOutlet weak var manufacturerTF: UITextField!
     @IBOutlet weak var modelTF: UITextField!
     @IBOutlet weak var yearManufacturedTF: UITextField!
@@ -13,27 +9,44 @@ class MyCarViewCarDetailsViewController: UIViewController {
     @IBOutlet weak var mileageTF: UITextField!
     @IBOutlet weak var costTF: UITextField!
     
+    var isEditingProfile: Bool = false
+    var carDetails: Car?
+    var newCar: Car?
+    
+    @IBAction func onEditBtnClicked(_ sender: UIBarButtonItem) {
+        isEditingProfile = !isEditingProfile
+        sender.title = isEditingProfile ? "Done" : "Edit"
+        
+        manufacturerTF.isEnabled = isEditingProfile
+        modelTF.isEnabled = isEditingProfile
+        yearManufacturedTF.isEnabled = isEditingProfile
+        engineTF.isEnabled = isEditingProfile
+        licensePlateTF.isEnabled = isEditingProfile
+        mileageTF.isEnabled = isEditingProfile
+        costTF.isEnabled = isEditingProfile
+        
+        // When user clicks 'done', save the data
+        if !isEditingProfile {
+            newCar = Car(
+                manufacturer: manufacturerTF.text ?? "",
+                model: modelTF.text ?? "",
+                yearManufactured: Int(yearManufacturedTF.text ?? "0") ?? 2000,
+                engine: engineTF.text ?? "",
+                licensePlate: licensePlateTF.text ?? "",
+                mileage: Double(mileageTF.text ?? "0") ?? 0.0,
+                cost: Double(costTF.text ?? "0") ?? 0.0,
+                servicesList: []
+            )
+            
+            updateCar(newCar: newCar!)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        // To test if data is passed correctly
-        // ======
-        //print("")
-        //print("Manufacturer: \(carDetails!.manufacturer)")
-        //print("Model: \(carDetails!.model)")
-        //print("Year Manufactured: \(carDetails!.yearManufactured)")
-        //print("Engine: \(carDetails!.engine)")
-        //print("License Plate: \(carDetails!.licensePlate)")
-        //print("Mileage: \(carDetails!.mileage)")
-        //print("Car Price: \(carDetails!.cost)")
-        //print("Services List: \(carDetails!.servicesList)")
-        //print("")
-        // === END OF TESTING ===
-        
-        // Setting the text fields based upon the car details passed
-        // ======
         manufacturerTF.text = carDetails!.manufacturer
         modelTF.text = carDetails!.model
         yearManufacturedTF.text = String(carDetails!.yearManufactured)
@@ -41,16 +54,7 @@ class MyCarViewCarDetailsViewController: UIViewController {
         licensePlateTF.text = carDetails!.licensePlate
         mileageTF.text = String(carDetails!.mileage)
         costTF.text = String(carDetails!.cost)
-        // === END OF UPDATING FIELDS ===
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showServices" {
-//            if let vc = segue.destination as? ServicesMainScreenViewController {
-//                vc.servicesList = carDetails!.servicesList
-//            }
-//        }
-//    }
     
     // Redirects to the 'Services' screen when the button is clicked
     @IBAction func viewServicesBtnClicked(_ sender: UIButton) {
