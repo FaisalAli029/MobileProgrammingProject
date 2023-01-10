@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -194,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="a5u-EF-305" userLabel="Text Fields Rows">
-                                <rect key="frame" x="25" y="155" width="380" height="181"/>
+                                <rect key="frame" x="25" y="155" width="380" height="227"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="MOh-M2-Dki" userLabel="Manufacturer">
                                         <rect key="frame" x="0.0" y="0.0" width="380" height="34"/>
@@ -272,6 +272,26 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CqJ-gO-Eav" userLabel="Engine">
+                                        <rect key="frame" x="0.0" y="196" width="380" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaA-2q-DBn">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="MAk-6x-BkX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tgh-od-TAW">
+                                                <rect key="frame" x="165" y="0.0" width="217" height="31"/>
+                                                <connections>
+                                                    <action selector="onCompletedStatusChanged:" destination="V53-x8-h4J" eventType="valueChanged" id="Hyq-Nz-TPC"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -294,6 +314,7 @@
                         <outlet property="costTF" destination="r09-WR-X3B" id="g0K-4N-fZm"/>
                         <outlet property="dateTF" destination="QC9-ie-Hdp" id="DiZ-AV-LhS"/>
                         <outlet property="mileageTF" destination="fCB-4G-sJz" id="wNm-tN-fZ9"/>
+                        <outlet property="statusToggle" destination="Tgh-od-TAW" id="pwb-nV-gQY"/>
                         <outlet property="titleTF" destination="MTa-Ru-H0C" id="PB9-lE-ZkN"/>
                     </connections>
                 </viewController>

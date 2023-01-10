@@ -21,7 +21,8 @@ class ServicesAddServiceViewController: UIViewController {
             title: (titleTF.text == nil || titleTF.text == "") ? "Untitled Service" : titleTF.text!,
             date: dateFormatter.date(from: dateTF.text ?? "2023-05-05") ?? Date(), // default date: 2023-05-05
             serviceMileage: Double(mileageTF.text ?? "0.0") ?? 0.0,
-            serviceCost: Double(costTF.text ?? "0.0") ?? 0.0
+            serviceCost: Double(costTF.text ?? "0.0") ?? 0.0,
+            isDone: false
         )
         
         addServiceToLocalStorage(serviceData: newService!)

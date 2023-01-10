@@ -6,4 +6,5 @@ struct Service: Codable {
     var date: Date
     var serviceMileage: Double
     var serviceCost: Double
+    var isDone: Bool
 }

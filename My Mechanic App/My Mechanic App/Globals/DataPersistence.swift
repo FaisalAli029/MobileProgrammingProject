@@ -156,6 +156,7 @@ func updateService(newService: Service) {
     myCarsData[selectedCarIndex].servicesList[selectedServiceIndex].date = newService.date
     myCarsData[selectedCarIndex].servicesList[selectedServiceIndex].serviceMileage = newService.serviceMileage
     myCarsData[selectedCarIndex].servicesList[selectedServiceIndex].serviceCost = newService.serviceCost
+    myCarsData[selectedCarIndex].servicesList[selectedServiceIndex].isDone = newService.isDone
     
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
