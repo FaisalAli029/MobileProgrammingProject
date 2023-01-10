@@ -1,7 +1,7 @@
 import Foundation
 
-struct Car {
-    let ID = UUID()
+struct Car: Codable {
+    var ID = UUID()
     var manufacturer: String
     var model: String
     var yearManufactured: Int

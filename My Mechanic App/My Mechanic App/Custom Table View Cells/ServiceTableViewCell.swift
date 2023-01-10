@@ -1,14 +1,10 @@
-//
-//  ServiceTableViewCell.swift
-//  My Mechanic App
-//
-//  Created by M.A on 07/01/2022.
-//
-
 import UIKit
 
 class ServiceTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var date: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +15,4 @@ class ServiceTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
