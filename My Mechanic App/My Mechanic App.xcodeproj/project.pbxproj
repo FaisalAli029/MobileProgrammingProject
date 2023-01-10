@@ -28,7 +28,7 @@
 		8E7665EA29675FDC001846A8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7665E929675FDC001846A8 /* Service.swift */; };
 		8E7665EC29676227001846A8 /* CarsDataSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7665EB29676227001846A8 /* CarsDataSample.swift */; };
 		8E7665F0296772ED001846A8 /* MyCarsMainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7665EF296772ED001846A8 /* MyCarsMainScreenViewController.swift */; };
-		8E997820296CD3D7001BD076 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E99781F296CD3D7001BD076 /* Person.swift */; };
+		8E997820296CD3D7001BD076 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E99781F296CD3D7001BD076 /* Profile.swift */; };
 		8E997822296CD429001BD076 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E997821296CD429001BD076 /* ProfileViewController.swift */; };
 		8EA62A7B296C9BAF0045ED22 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA62A7A296C9BAE0045ED22 /* DataPersistence.swift */; };
 		8EA62A7D296CA2DA0045ED22 /* CarsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA62A7C296CA2DA0045ED22 /* CarsData.swift */; };
@@ -80,7 +80,7 @@
 		8E7665E929675FDC001846A8 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		8E7665EB29676227001846A8 /* CarsDataSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsDataSample.swift; sourceTree = "<group>"; };
 		8E7665EF296772ED001846A8 /* MyCarsMainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarsMainScreenViewController.swift; sourceTree = "<group>"; };
-		8E99781F296CD3D7001BD076 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		8E99781F296CD3D7001BD076 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8E997821296CD429001BD076 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8EA62A7A296C9BAE0045ED22 /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
 		8EA62A7C296CA2DA0045ED22 /* CarsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsData.swift; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 			children = (
 				8E7665E729674F28001846A8 /* Car.swift */,
 				8E7665E929675FDC001846A8 /* Service.swift */,
-				8E99781F296CD3D7001BD076 /* Person.swift */,
+				8E99781F296CD3D7001BD076 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E997820296CD3D7001BD076 /* Person.swift in Sources */,
+				8E997820296CD3D7001BD076 /* Profile.swift in Sources */,
 				8EA62A7D296CA2DA0045ED22 /* CarsData.swift in Sources */,
 				8E42DF20296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift in Sources */,
 				8B84E248296B260A004538B6 /* MyCarsAddCarViewController.swift in Sources */,

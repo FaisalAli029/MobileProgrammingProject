@@ -2,6 +2,12 @@
 
 import Foundation
 
+let carFileName: String = "carsData"
+let serviceFileName: String = ""
+let userInfoFileName: String = "userInfo"
+
+// [[ MANAGING CARS ]]
+
 // Read data from local storage and returns it
 func readCarsData() -> [Car] {
     
@@ -13,7 +19,7 @@ func readCarsData() -> [Car] {
     ).first!
     
     let archiveURL = documentsDirectory
-        .appendingPathComponent("carsData")
+        .appendingPathComponent(carFileName)
         .appendingPathExtension("plist")
     
     let propertyListDecoder = PropertyListDecoder()
@@ -48,7 +54,7 @@ func addCarToLocalStorage(carData: Car) {
     ).first!
     
     let archiveURL = documentsDirectory
-        .appendingPathComponent("carsData")
+        .appendingPathComponent(carFileName)
         .appendingPathExtension("plist")
     
     let propertyListEncoder = PropertyListEncoder()
@@ -67,11 +73,61 @@ func updateCarsListStored(carsList: [Car]) {
     ).first!
     
     let archiveURL = documentsDirectory
-        .appendingPathComponent("carsData")
+        .appendingPathComponent(carFileName)
         .appendingPathExtension("plist")
     
     let propertyListEncoder = PropertyListEncoder()
     
     let encodedData = try? propertyListEncoder.encode(myCarsData)
+    try? encodedData?.write(to: archiveURL, options: .noFileProtection)
+}
+
+// [[ MANAGING SERVICES ]]
+
+
+// [[ MANAGING PROFILE INFO ]]
+
+// Reads user's info and then returns it
+func readUserInfo() -> Profile {
+    
+    var myProfile: Profile = Profile(
+        fullName: "",
+        email: "",
+        age: "",
+        address: ""
+    )
+    
+    let documentsDirectory = FileManager.default.urls(
+        for: .documentDirectory,
+        in: .userDomainMask
+    ).first!
+    
+    let archiveURL = documentsDirectory
+        .appendingPathComponent(userInfoFileName)
+        .appendingPathExtension("plist")
+    
+    let propertyListDecoder = PropertyListDecoder()
+    
+    if let retrievedUserInfo = try? Data(contentsOf: archiveURL),
+       let decodedUserInfo = try? propertyListDecoder.decode(Profile.self, from: retrievedUserInfo) {
+        myProfile = decodedUserInfo
+    }
+    
+    return myProfile
+}
+
+func saveUserInfo(profileInfo: Profile) {
+    let documentsDirectory = FileManager.default.urls(
+        for: .documentDirectory,
+        in: .userDomainMask
+    ).first!
+
+    let archiveURL = documentsDirectory
+        .appendingPathComponent(userInfoFileName)
+        .appendingPathExtension("plist")
+
+    let propertyListEncoder = PropertyListEncoder()
+
+    let encodedData = try? propertyListEncoder.encode(profileInfo)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
