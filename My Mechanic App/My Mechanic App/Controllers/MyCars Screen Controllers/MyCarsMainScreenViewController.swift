@@ -25,16 +25,17 @@ class MyCarsMainScreenViewController: UIViewController {
         myCarsTableView.register(nib, forCellReuseIdentifier: "carCell")
         myCarsTableView.delegate = self
         myCarsTableView.dataSource = self
-        
-        // Load Car(s) data from local storage
-        myCarsList = readCarsData()
     }
     
     // When user is redirected to this screen from any other screen like: 'Add Car' screen
     // the table data should be updated (reloaded)
     override func viewWillAppear(_ animated: Bool) {
-        myCarsTableView.reloadData()
+        
+        // Load Car(s) data from local storage
+        myCarsList = readCarsData()
+        
         myCarsData = myCarsList
+        myCarsTableView.reloadData()
     }
     
     // When user adds a new car, the user will be redirected from the 'add car' screen to here with the updated cars list
@@ -81,6 +82,7 @@ extension MyCarsMainScreenViewController: UITableViewDelegate, UITableViewDataSo
     // On Cell Selection
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCar = myCarsList[indexPath.row]
+        selectedCarIndex = indexPath.row // Updates the GLOBAL selected car
         self.performSegue(withIdentifier: "showCarDetails", sender: self)
     }
     

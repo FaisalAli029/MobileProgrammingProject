@@ -44,13 +44,13 @@ class MyCarViewCarDetailsViewController: UIViewController {
         // === END OF UPDATING FIELDS ===
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showServices" {
-            if let vc = segue.destination as? ServicesMainScreenViewController {
-                vc.servicesList = carDetails!.servicesList
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showServices" {
+//            if let vc = segue.destination as? ServicesMainScreenViewController {
+//                vc.servicesList = carDetails!.servicesList
+//            }
+//        }
+//    }
     
     // Redirects to the 'Services' screen when the button is clicked
     @IBAction func viewServicesBtnClicked(_ sender: UIButton) {

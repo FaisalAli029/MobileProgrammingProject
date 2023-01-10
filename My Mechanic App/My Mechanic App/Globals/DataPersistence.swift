@@ -3,8 +3,9 @@
 import Foundation
 
 let carFileName: String = "carsData"
-let serviceFileName: String = ""
 let userInfoFileName: String = "userInfo"
+
+
 
 // [[ MANAGING CARS ]]
 
@@ -82,7 +83,48 @@ func updateCarsListStored(carsList: [Car]) {
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
 
+
+
 // [[ MANAGING SERVICES ]]
+
+// Adds a service to the globally selected car (using an index) and then overwrites the carsList that is stored locally
+func addServiceToLocalStorage(serviceData: Service) {
+    myCarsData[selectedCarIndex].servicesList.append(serviceData)
+    
+    let documentsDirectory = FileManager.default.urls(
+        for: .documentDirectory,
+        in: .userDomainMask
+    ).first!
+    
+    let archiveURL = documentsDirectory
+        .appendingPathComponent(carFileName)
+        .appendingPathExtension("plist")
+    
+    let propertyListEncoder = PropertyListEncoder()
+    
+    let encodedData = try? propertyListEncoder.encode(myCarsData)
+    try? encodedData?.write(to: archiveURL, options: .noFileProtection)
+}
+
+// Overwrites the servicesList of the selected car both on local storage and the global variable
+func updateSerivcesListStored(servicesList: [Service]) {
+    myCarsData[selectedCarIndex].servicesList = servicesList
+    
+    let documentsDirectory = FileManager.default.urls(
+        for: .documentDirectory,
+        in: .userDomainMask
+    ).first!
+    
+    let archiveURL = documentsDirectory
+        .appendingPathComponent(carFileName)
+        .appendingPathExtension("plist")
+    
+    let propertyListEncoder = PropertyListEncoder()
+    
+    let encodedData = try? propertyListEncoder.encode(myCarsData)
+    try? encodedData?.write(to: archiveURL, options: .noFileProtection)
+}
+
 
 
 // [[ MANAGING PROFILE INFO ]]
