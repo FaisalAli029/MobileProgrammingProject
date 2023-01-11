@@ -15,7 +15,13 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="k7J-zi-CGO">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <stackView key="tableFooterView" opaque="NO" contentMode="scaleToFill" axis="vertical" id="FSR-DD-QKj">
+                            <rect key="frame" x="0.0" y="0.0" width="430" height="832"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.79319274429999997" green="0.83745056389999994" blue="0.96472209689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </stackView>
                         <connections>
                             <outlet property="dataSource" destination="nKY-E9-gZ0" id="EXa-dZ-nGR"/>
                             <outlet property="delegate" destination="nKY-E9-gZ0" id="zpd-P4-Nz7"/>
@@ -24,11 +30,13 @@
                     <navigationItem key="navigationItem" title="My Services" largeTitleDisplayMode="always" id="FSo-s6-sbS">
                         <rightBarButtonItems>
                             <barButtonItem title="Edit" id="aBr-Kh-vqw">
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <connections>
                                     <action selector="editBtnClicked:" destination="nKY-E9-gZ0" id="kBL-dJ-bbS"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="plus" catalog="system" id="Dcy-Gk-y8p">
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <connections>
                                     <segue destination="AJd-PG-gal" kind="show" id="GeM-2Q-MXs"/>
                                 </connections>
@@ -67,12 +75,18 @@
         <scene sceneID="OIS-RL-W4T">
             <objects>
                 <viewController id="AJd-PG-gal" customClass="ServicesAddServiceViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZMK-9h-LIH">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="ZMK-9h-LIH">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUo-eO-Be2">
-                                <rect key="frame" x="149.33333333333337" y="361" width="131.66666666666663" height="50.333333333333314"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h35-RJ-4bh">
+                                <rect key="frame" x="0.0" y="155" width="430" height="777"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="0.79319274429999997" green="0.83745056389999994" blue="0.96472209689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bUo-eO-Be2">
+                                <rect key="frame" x="154" y="464" width="132" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Service" buttonSize="large"/>
                                 <connections>
@@ -80,8 +94,9 @@
                                     <segue destination="l92-eg-LKF" kind="unwind" unwindAction="unwindToServicesScreen:" id="YXy-xe-BAx"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="c2d-bt-nai" userLabel="Text Fields Rows">
-                                <rect key="frame" x="25" y="155" width="380" height="181"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" id="c2d-bt-nai" userLabel="Text Fields Rows">
+                                <rect key="frame" x="30" y="258" width="380" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Gbj-29-dUZ" userLabel="Manufacturer">
                                         <rect key="frame" x="0.0" y="0.0" width="380" height="34"/>
@@ -163,7 +178,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kTw-lh-cza"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
                             <constraint firstItem="c2d-bt-nai" firstAttribute="top" secondItem="kTw-lh-cza" secondAttribute="top" id="F9s-ac-N8m"/>
                             <constraint firstItem="bUo-eO-Be2" firstAttribute="top" secondItem="c2d-bt-nai" secondAttribute="bottom" constant="25" id="Vkq-xu-s4w"/>
@@ -183,7 +198,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOI-XT-B80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="l92-eg-LKF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5362" y="286"/>
+            <point key="canvasLocation" x="5360.9302325581393" y="285.83690987124464"/>
         </scene>
         <!--Services View Service View Controller-->
         <scene sceneID="kwK-k4-SbR">
@@ -193,8 +208,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="a5u-EF-305" userLabel="Text Fields Rows">
-                                <rect key="frame" x="25" y="155" width="380" height="227"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="tZO-eA-avy">
+                                <rect key="frame" x="0.0" y="155" width="430" height="777"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="0.79319274429999997" green="0.83745056389999994" blue="0.96472209689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" id="a5u-EF-305" userLabel="Text Fields Rows">
+                                <rect key="frame" x="30" y="275" width="380" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="MOh-M2-Dki" userLabel="Manufacturer">
                                         <rect key="frame" x="0.0" y="0.0" width="380" height="34"/>
@@ -296,7 +317,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yla-KO-g9B"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
                             <constraint firstItem="a5u-EF-305" firstAttribute="leading" secondItem="yla-KO-g9B" secondAttribute="leading" constant="25" id="C1T-LH-6hI"/>
                             <constraint firstItem="yla-KO-g9B" firstAttribute="trailing" secondItem="a5u-EF-305" secondAttribute="trailing" constant="25" id="g2D-EZ-9AS"/>
@@ -320,13 +341,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sua-LR-hJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5362" y="984"/>
+            <point key="canvasLocation" x="5360.9302325581393" y="983.69098712446362"/>
         </scene>
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
