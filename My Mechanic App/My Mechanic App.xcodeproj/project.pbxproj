@@ -41,6 +41,7 @@
 		8EC10EBA2971AAED001D6E2E /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC10EB92971AAED001D6E2E /* TabBarControllerViewController.swift */; };
 		8EC10EBC2971B2B3001D6E2E /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC10EBB2971B2B3001D6E2E /* MainScreenViewController.swift */; };
 		8EC10EBE2971BD14001D6E2E /* Login Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC10EBD2971BD14001D6E2E /* Login Screen.storyboard */; };
+		8EC10EC02971D7DB001D6E2E /* RegistrationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC10EBF2971D7DB001D6E2E /* RegistrationScreenViewController.swift */; };
 		8ECFD254296669C8004BADB1 /* MyCars Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ECFD253296669C8004BADB1 /* MyCars Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		8EC10EB92971AAED001D6E2E /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		8EC10EBB2971B2B3001D6E2E /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		8EC10EBD2971BD14001D6E2E /* Login Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login Screen.storyboard"; sourceTree = "<group>"; };
+		8EC10EBF2971D7DB001D6E2E /* RegistrationScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreenViewController.swift; sourceTree = "<group>"; };
 		8ECFD253296669C8004BADB1 /* MyCars Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "MyCars Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC10EB529719FFC001D6E2E /* LoginScreenViewController.swift */,
+				8EC10EBF2971D7DB001D6E2E /* RegistrationScreenViewController.swift */,
 			);
 			path = "Login and Registration Screens";
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC10EC02971D7DB001D6E2E /* RegistrationScreenViewController.swift in Sources */,
 				8E997820296CD3D7001BD076 /* Profile.swift in Sources */,
 				8EA62A7D296CA2DA0045ED22 /* CarsData.swift in Sources */,
 				8EC10EB629719FFC001D6E2E /* LoginScreenViewController.swift in Sources */,

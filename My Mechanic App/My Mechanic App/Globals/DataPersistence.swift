@@ -181,10 +181,12 @@ func updateService(newService: Service) {
 func readUserInfo() -> Profile {
     
     var myProfile: Profile = Profile(
-        fullName: "",
         email: "",
+        password: "",
+        fullName: "",
         age: "",
-        address: ""
+        address: "",
+        carsList: []
     )
     
     let documentsDirectory = FileManager.default.urls(
