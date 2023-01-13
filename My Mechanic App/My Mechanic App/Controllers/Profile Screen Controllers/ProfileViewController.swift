@@ -44,6 +44,13 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         addressLabel.text = myProfile!.address
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? MainScreenViewController {
+            // TODO: edit local storage login status
+            vc.isLoggedIn = false
+        }
+    }
+    
     // To dismiss keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

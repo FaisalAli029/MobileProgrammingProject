@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="8QJ-kq-wt1">
+            <objects>
+                <viewController storyboardIdentifier="loginScreen" id="SgJ-k4-jii" customClass="LoginScreenViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5qe-4s-LdL">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgq-ax-RnA">
+                                <rect key="frame" x="169" y="441" width="92" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign In" buttonSize="large"/>
+                                <connections>
+                                    <segue destination="voV-SD-XgH" kind="unwind" unwindAction="unwindToMainScreen:" id="TC0-JC-CyP"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EhM-gE-YHb">
+                                <rect key="frame" x="24" y="59" width="406" height="96"/>
+                                <items>
+                                    <navigationItem title="Login" largeTitleDisplayMode="always" id="SqS-53-DhP">
+                                        <barButtonItem key="rightBarButtonItem" title="Register" id="6YV-qM-DX1">
+                                            <connections>
+                                                <segue destination="sZY-Ir-z9G" kind="show" id="y7Y-0b-1hp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mYw-Wc-6Ty"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EhM-gE-YHb" firstAttribute="trailing" secondItem="mYw-Wc-6Ty" secondAttribute="trailing" id="4Fe-kv-7vh"/>
+                            <constraint firstItem="EhM-gE-YHb" firstAttribute="top" secondItem="mYw-Wc-6Ty" secondAttribute="top" id="Dwc-b4-UeS"/>
+                            <constraint firstItem="EhM-gE-YHb" firstAttribute="leading" secondItem="mYw-Wc-6Ty" secondAttribute="leading" constant="24" id="a2o-pp-1sO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" largeTitleDisplayMode="always" id="UHK-Hm-fgb">
+                        <barButtonItem key="rightBarButtonItem" title="Register" id="I7g-Fk-S1h"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sj3-MR-iH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="voV-SD-XgH" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2284.7328244274809" y="-152.11267605633805"/>
+        </scene>
+        <!--registrationScreen-->
+        <scene sceneID="GDk-mq-ZR8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Registration Screen" referencedIdentifier="registrationScreen" id="sZY-Ir-z9G" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Bta-O3-1eB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psh-JD-Iy1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2929.0076335877861" y="-152.11267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

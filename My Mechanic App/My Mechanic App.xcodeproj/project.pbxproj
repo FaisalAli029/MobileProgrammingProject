@@ -35,6 +35,12 @@
 		8EA62A7D296CA2DA0045ED22 /* CarsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA62A7C296CA2DA0045ED22 /* CarsData.swift */; };
 		8EB6F5862967863E00B3269F /* MyCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6F5842967863E00B3269F /* MyCarTableViewCell.swift */; };
 		8EB6F5872967863F00B3269F /* MyCarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB6F5852967863E00B3269F /* MyCarTableViewCell.xib */; };
+		8EC10EB129719780001D6E2E /* Tab Bar Controller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC10EB029719780001D6E2E /* Tab Bar Controller.storyboard */; };
+		8EC10EB32971999E001D6E2E /* Registration Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC10EB22971999E001D6E2E /* Registration Screen.storyboard */; };
+		8EC10EB629719FFC001D6E2E /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC10EB529719FFC001D6E2E /* LoginScreenViewController.swift */; };
+		8EC10EBA2971AAED001D6E2E /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC10EB92971AAED001D6E2E /* TabBarControllerViewController.swift */; };
+		8EC10EBC2971B2B3001D6E2E /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC10EBB2971B2B3001D6E2E /* MainScreenViewController.swift */; };
+		8EC10EBE2971BD14001D6E2E /* Login Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC10EBD2971BD14001D6E2E /* Login Screen.storyboard */; };
 		8ECFD254296669C8004BADB1 /* MyCars Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ECFD253296669C8004BADB1 /* MyCars Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +94,12 @@
 		8EA62A7C296CA2DA0045ED22 /* CarsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsData.swift; sourceTree = "<group>"; };
 		8EB6F5842967863E00B3269F /* MyCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarTableViewCell.swift; sourceTree = "<group>"; };
 		8EB6F5852967863E00B3269F /* MyCarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCarTableViewCell.xib; sourceTree = "<group>"; };
+		8EC10EB029719780001D6E2E /* Tab Bar Controller.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Tab Bar Controller.storyboard"; sourceTree = "<group>"; };
+		8EC10EB22971999E001D6E2E /* Registration Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Registration Screen.storyboard"; sourceTree = "<group>"; };
+		8EC10EB529719FFC001D6E2E /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		8EC10EB92971AAED001D6E2E /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
+		8EC10EBB2971B2B3001D6E2E /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		8EC10EBD2971BD14001D6E2E /* Login Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Login Screen.storyboard"; sourceTree = "<group>"; };
 		8ECFD253296669C8004BADB1 /* MyCars Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "MyCars Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,11 +220,22 @@
 			path = "Custom Table View Cells";
 			sourceTree = "<group>";
 		};
+		8EC10EB429719F43001D6E2E /* Login and Registration Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8EC10EB529719FFC001D6E2E /* LoginScreenViewController.swift */,
+			);
+			path = "Login and Registration Screens";
+			sourceTree = "<group>";
+		};
 		8ECFD24E296666B5004BADB1 /* Screen Views (Storyboards) */ = {
 			isa = PBXGroup;
 			children = (
-				22E66EE62950CB86006094AF /* Main.storyboard */,
 				22E66EEB2950CB87006094AF /* LaunchScreen.storyboard */,
+				22E66EE62950CB86006094AF /* Main.storyboard */,
+				8EC10EBD2971BD14001D6E2E /* Login Screen.storyboard */,
+				8EC10EB22971999E001D6E2E /* Registration Screen.storyboard */,
+				8EC10EB029719780001D6E2E /* Tab Bar Controller.storyboard */,
 				8ECFD253296669C8004BADB1 /* MyCars Screen.storyboard */,
 				8B3FB9CF296B0705000AD0ED /* Services Screen.storyboard */,
 				8E7665E02966770C001846A8 /* Profile Screen.storyboard */,
@@ -224,6 +247,9 @@
 		8ECFD25029666753004BADB1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8EC10EBB2971B2B3001D6E2E /* MainScreenViewController.swift */,
+				8EC10EB92971AAED001D6E2E /* TabBarControllerViewController.swift */,
+				8EC10EB429719F43001D6E2E /* Login and Registration Screens */,
 				8E7665E42966811E001846A8 /* MyCars Screen Controllers */,
 				8E7665E629668146001846A8 /* Services Screen Controllers */,
 				8E7665E529668135001846A8 /* Profile Screen Controllers */,
@@ -355,15 +381,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC10EB32971999E001D6E2E /* Registration Screen.storyboard in Resources */,
 				22E66EED2950CB87006094AF /* LaunchScreen.storyboard in Resources */,
 				8ECFD254296669C8004BADB1 /* MyCars Screen.storyboard in Resources */,
 				8EB6F5872967863F00B3269F /* MyCarTableViewCell.xib in Resources */,
+				8EC10EB129719780001D6E2E /* Tab Bar Controller.storyboard in Resources */,
 				22E66EEA2950CB87006094AF /* Assets.xcassets in Resources */,
 				8E7665E329667717001846A8 /* About Screen.storyboard in Resources */,
 				8B3FB9CA296B03E0000AD0ED /* ServiceTableViewCell.xib in Resources */,
 				22E66EE82950CB86006094AF /* Main.storyboard in Resources */,
 				8B3FB9D0296B0705000AD0ED /* Services Screen.storyboard in Resources */,
 				8E7665E12966770C001846A8 /* Profile Screen.storyboard in Resources */,
+				8EC10EBE2971BD14001D6E2E /* Login Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,12 +419,15 @@
 			files = (
 				8E997820296CD3D7001BD076 /* Profile.swift in Sources */,
 				8EA62A7D296CA2DA0045ED22 /* CarsData.swift in Sources */,
+				8EC10EB629719FFC001D6E2E /* LoginScreenViewController.swift in Sources */,
 				8E42DF20296B5205003A2B1D /* MyCarViewCarDetailsViewController.swift in Sources */,
 				8B84E248296B260A004538B6 /* MyCarsAddCarViewController.swift in Sources */,
+				8EC10EBC2971B2B3001D6E2E /* MainScreenViewController.swift in Sources */,
 				22E66EE12950CB86006094AF /* AppDelegate.swift in Sources */,
 				8B3FB9C9296B03E0000AD0ED /* ServiceTableViewCell.swift in Sources */,
 				8E997822296CD429001BD076 /* ProfileViewController.swift in Sources */,
 				8E7665F0296772ED001846A8 /* MyCarsMainScreenViewController.swift in Sources */,
+				8EC10EBA2971AAED001D6E2E /* TabBarControllerViewController.swift in Sources */,
 				8EA62A7B296C9BAF0045ED22 /* DataPersistence.swift in Sources */,
 				8EB6F5862967863E00B3269F /* MyCarTableViewCell.swift in Sources */,
 				8E7665EA29675FDC001846A8 /* Service.swift in Sources */,
@@ -510,7 +542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -564,7 +596,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -583,21 +615,28 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My Mechanic App/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "polytechnic.bh.My-Mechanic-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -610,21 +649,28 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My Mechanic App/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "polytechnic.bh.My-Mechanic-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -640,9 +686,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "polytechnic.bh.My-Mechanic-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Mechanic App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/My Mechanic App";
 			};
 			name = Debug;
@@ -659,9 +708,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "polytechnic.bh.My-Mechanic-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Mechanic App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/My Mechanic App";
 			};
 			name = Release;
@@ -676,9 +728,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "polytechnic.bh.My-Mechanic-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "My Mechanic App";
 			};
 			name = Debug;
@@ -693,9 +748,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "polytechnic.bh.My-Mechanic-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "My Mechanic App";
 			};
 			name = Release;
