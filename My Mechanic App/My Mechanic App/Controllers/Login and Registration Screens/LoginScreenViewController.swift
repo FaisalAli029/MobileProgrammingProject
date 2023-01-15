@@ -24,13 +24,16 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func onSignIn(_ sender: UIButton) {
+        var counter: Int = 0
         for profile in storedProfiles {
             if profile.email == emailTF.text && profile.password == passwordTF.text {
                 isSignInSuccessful = true
                 UserDefaults.standard.setValue(isSignInSuccessful, forKey: "isLoggedIn")
+                selectedProfileIndex = counter
                 performSegue(withIdentifier: "unwind", sender: self)
                 return
             }
+            counter += 1
         }
         
         // This part of the function will only run if the user fails to log in
