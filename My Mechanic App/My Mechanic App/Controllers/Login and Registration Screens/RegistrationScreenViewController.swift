@@ -26,7 +26,44 @@ class RegistrationScreenViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func onRegister(_ sender: UIButton) {
+        let myNewProfile: Profile = Profile(
+            email: emailTF.text ?? "",
+            password: passwordTF.text ?? "",
+            fullName: fullnameTF.text ?? "",
+            age: ageTF.text ?? "",
+            address: addressTF.text ?? "",
+            carsList: []
+        )
         
+        if myNewProfile.password.count < 6 {
+            let alert = UIAlertController(
+                title: "Short Password",
+                message: "You password must contain at least six characters.",
+                preferredStyle: .alert)
+            
+            // When clicked, does nothing
+            alert.addAction(UIAlertAction(title: "Fix now!", style: .default, handler: { _ in }))
+            
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        // Creates user if it doesn't exist
+        if !checkUserExistence(userInfo: myNewProfile) {
+            registerUserInfo(profileInfo: myNewProfile)
+            performSegue(withIdentifier: "unwind", sender: self)
+        } else {
+            //print("User already exists")
+            let alert = UIAlertController(
+                title: "User Already Exists",
+                message: "A user with this email address already exists.",
+                preferredStyle: .alert)
+            
+            // When clicked, does nothing
+            alert.addAction(UIAlertAction(title: "Fix now!", style: .default, handler: { _ in }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     /*

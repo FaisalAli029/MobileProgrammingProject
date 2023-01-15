@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         
         // When user clicks 'done', save the data
         if !isEditingProfile {
-            saveUserInfo(profileInfo: myProfile!)
+            registerUserInfo(profileInfo: myProfile!)
         }
     }
     
@@ -36,7 +36,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         addressLabel.delegate = self
         
         // Read user data from local storage
-        myProfile = readUserInfo()
+        //myProfile = readUserInfo()
+        myProfile = Profile(email: "", password: "", fullName: "", age: "", address: "", carsList: [])
         
         fullNameLabel.text = myProfile!.fullName
         emailLabel.text = myProfile!.email
@@ -47,6 +48,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? MainScreenViewController {
             // TODO: edit local storage login status
+            UserDefaults.standard.setValue(false, forKey: "isLoggedIn")
             vc.isLoggedIn = false
         }
     }

@@ -178,16 +178,8 @@ func updateService(newService: Service) {
 // [[ MANAGING PROFILE INFO ]]
 
 // Reads user's info and then returns it
-func readUserInfo() -> Profile {
-    
-    var myProfile: Profile = Profile(
-        email: "",
-        password: "",
-        fullName: "",
-        age: "",
-        address: "",
-        carsList: []
-    )
+func readUsersListStored() -> [Profile] {
+    var tempProfilesList: [Profile] = []
     
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
@@ -201,14 +193,31 @@ func readUserInfo() -> Profile {
     let propertyListDecoder = PropertyListDecoder()
     
     if let retrievedUserInfo = try? Data(contentsOf: archiveURL),
-       let decodedUserInfo = try? propertyListDecoder.decode(Profile.self, from: retrievedUserInfo) {
-        myProfile = decodedUserInfo
+       let decodedUserInfo = try? propertyListDecoder.decode(Array<Profile>.self, from: retrievedUserInfo) {
+        for data in decodedUserInfo {
+            tempProfilesList.append(data)
+        }
     }
     
-    return myProfile
+    return tempProfilesList
 }
 
-func saveUserInfo(profileInfo: Profile) {
+func checkUserExistence(userInfo: Profile) -> Bool {
+    let userExists: Bool = false
+    let profilesStored: [Profile] = readUsersListStored()
+    
+    for profile in profilesStored {
+        if userInfo.email == profile.email {
+            return true
+        }
+    }
+    
+    return userExists
+}
+
+func registerUserInfo(profileInfo: Profile) {
+    profilesData.append(profileInfo)
+    
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
         in: .userDomainMask
@@ -220,6 +229,6 @@ func saveUserInfo(profileInfo: Profile) {
 
     let propertyListEncoder = PropertyListEncoder()
 
-    let encodedData = try? propertyListEncoder.encode(profileInfo)
+    let encodedData = try? propertyListEncoder.encode(profilesData)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }

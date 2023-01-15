@@ -143,9 +143,11 @@
                         <outlet property="emailTF" destination="OFK-2H-e7E" id="YI8-ck-I5C"/>
                         <outlet property="fullnameTF" destination="dfD-RL-ODD" id="gDK-gX-ods"/>
                         <outlet property="passwordTF" destination="nxB-nS-sqJ" id="RUU-bP-LJf"/>
+                        <segue destination="D4T-fE-47v" kind="unwind" identifier="unwind" unwindAction="unwindToMainScreen:" id="mgL-zO-gHD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="D4T-fE-47v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="970.2290076335878" y="3.5211267605633805"/>
         </scene>

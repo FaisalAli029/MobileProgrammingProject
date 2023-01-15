@@ -86,7 +86,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In" buttonSize="large"/>
                                 <connections>
-                                    <segue destination="voV-SD-XgH" kind="unwind" unwindAction="unwindToMainScreen:" id="TC0-JC-CyP"/>
+                                    <action selector="onSignIn:" destination="SgJ-k4-jii" eventType="touchUpInside" id="LZP-f5-mX6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,8 +109,9 @@
                         <barButtonItem key="rightBarButtonItem" title="Register" id="I7g-Fk-S1h"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailTF" destination="sfm-e7-kty" id="qMv-eR-KNI"/>
+                        <outlet property="emailTF" destination="nAT-mZ-QAx" id="0XY-fW-qYQ"/>
                         <outlet property="passwordTF" destination="sfm-e7-kty" id="VfN-fp-G9q"/>
+                        <segue destination="voV-SD-XgH" kind="unwind" identifier="unwind" unwindAction="unwindToMainScreen:" id="c6Y-dN-r4b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sj3-MR-iH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

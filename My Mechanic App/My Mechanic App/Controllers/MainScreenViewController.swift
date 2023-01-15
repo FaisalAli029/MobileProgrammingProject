@@ -13,6 +13,8 @@ class MainScreenViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+        print(isLoggedIn)
         if isLoggedIn {
             performSegue(withIdentifier: "showTabbarScreen", sender: self)
         } else {
