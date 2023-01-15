@@ -1,10 +1,13 @@
 import UIKit
 import UserNotifications
 
-class MyCarsMainScreenViewController: UIViewController {
-
+class MyCarsMainScreenViewController: UIViewController, UISearchBarDelegate, UISearchResultsUpdating {
+    
     @IBOutlet weak var myCarsTableView: UITableView!
     @IBOutlet weak var addBtn: UIBarButtonItem!
+    
+    // creating the search bar controller
+    let searchController = UISearchController()
     
     @IBAction func editBtn(_ sender: UIBarButtonItem) {
         myCarsTableView.isEditing = !myCarsTableView.isEditing
@@ -18,14 +21,34 @@ class MyCarsMainScreenViewController: UIViewController {
     // Will be passed to the 'View Car Details' screen
     var selectedCar: Car?
     
+    // List of filtered cars
+    var filteredCarsList = myCarsData
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // initilize the search controller
+        initSearchController()
 
         // Do any additional setup after loading the view.
         let nib = UINib(nibName: "MyCarTableViewCell", bundle: nil)
         myCarsTableView.register(nib, forCellReuseIdentifier: "carCell")
         myCarsTableView.delegate = self
         myCarsTableView.dataSource = self
+    }
+    // the initilizer that sets up the search bar including the scope buttons under it
+    func initSearchController() {
+        searchController.loadViewIfNeeded()
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.enablesReturnKeyAutomatically = false
+        searchController.searchBar.returnKeyType = UIReturnKeyType.done
+        searchController.searchBar.placeholder = "Menufacturer, Model, Licence Plate"
+        definesPresentationContext = true
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.scopeButtonTitles = ["All", "Sorted A-Z", "Sorted Z-A"]
+        searchController.searchBar.delegate = self
     }
     
     func notifications(myCar: Car) {
@@ -125,6 +148,9 @@ extension MyCarsMainScreenViewController: UITableViewDelegate, UITableViewDataSo
     
     // Total number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(searchController.isActive) {
+            return filteredCarsList.count
+        }
         return myCarsList.count
     }
     
@@ -135,19 +161,33 @@ extension MyCarsMainScreenViewController: UITableViewDelegate, UITableViewDataSo
             for: indexPath
         ) as! MyCarTableViewCell
         
-        cell.manufacturerLabel.text = myCarsList[indexPath.row].manufacturer
-        cell.modelTitleLabel.text = "Model:"
-        cell.modelLabel.text = myCarsList[indexPath.row].model
-        cell.licensePlateTitleLabel.text = "License Plate:"
-        cell.licensePlateLabel.text = myCarsList[indexPath.row].licensePlate
-        
+        if(searchController.isActive) {
+            cell.manufacturerLabel.text = filteredCarsList[indexPath.row].manufacturer
+            cell.modelTitleLabel.text = "Model:"
+            cell.modelLabel.text = filteredCarsList[indexPath.row].model
+            cell.licensePlateTitleLabel.text = "License Plate:"
+            cell.licensePlateLabel.text = filteredCarsList[indexPath.row].licensePlate
+        }
+        else {
+            cell.manufacturerLabel.text = myCarsList[indexPath.row].manufacturer
+            cell.modelTitleLabel.text = "Model:"
+            cell.modelLabel.text = myCarsList[indexPath.row].model
+            cell.licensePlateTitleLabel.text = "License Plate:"
+            cell.licensePlateLabel.text = myCarsList[indexPath.row].licensePlate
+        }
         return cell
     }
     
     // On Cell Selection
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCar = myCarsList[indexPath.row]
-        selectedCarIndex = indexPath.row // Updates the GLOBAL selected car
+        if(searchController.isActive) {
+            selectedCar = filteredCarsList[indexPath.row]
+            selectedCarIndex = indexPath.row // Updates the GLOBAL selected car
+        }else {
+            selectedCar = myCarsList[indexPath.row]
+            selectedCarIndex = indexPath.row // Updates the GLOBAL selected car
+        }
+        
         self.performSegue(withIdentifier: "showCarDetails", sender: self)
     }
     
@@ -178,5 +218,33 @@ extension MyCarsMainScreenViewController: UITableViewDelegate, UITableViewDataSo
         } else if editingStyle == .insert {
             // do nothing
         }
+    }
+    
+    // this function updates the results from the search bar based on the text inside the search text field and the scope buttons
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        
+        let scopeButton = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        
+        let searchText = searchBar.text!
+        
+        filterForSearchTextAndSearchButton(searchText: searchText, scopeButton: scopeButton)
+    }
+    
+    //
+    func filterForSearchTextAndSearchButton(searchText: String, scopeButton: String = "All") {
+        filteredCarsList = myCarsList.filter({ car in
+            var searchTextMatch: Bool = true
+            if (searchController.searchBar.text != "") {
+                searchTextMatch = (car.manufacturer.lowercased().contains(searchText.lowercased()) || car.model.lowercased().contains(searchText.lowercased()) || car.licensePlate.contains(searchText))
+            }
+            return searchTextMatch
+        })
+        if(scopeButton.lowercased() == "sorted a-z") {
+            filteredCarsList = filteredCarsList.sorted { $0.manufacturer.lowercased() < $1.manufacturer.lowercased() }
+        }else if (scopeButton.lowercased() == "sorted z-a") {
+            filteredCarsList = filteredCarsList.sorted { $0.manufacturer.lowercased() > $1.manufacturer.lowercased() }
+        }
+        myCarsTableView.reloadData()
     }
 }
