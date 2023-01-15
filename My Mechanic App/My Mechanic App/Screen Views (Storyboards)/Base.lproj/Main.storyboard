@@ -1,70 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g49-a1-uKO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6qG-PQ-4HQ">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
-        <scene sceneID="sx6-TN-0BG">
+        <!--tabbarController-->
+        <scene sceneID="gCr-NB-OQ1">
             <objects>
-                <tabBarController id="g49-a1-uKO" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Q6o-My-HTu">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                <viewControllerPlaceholder storyboardName="Tab Bar Controller" referencedIdentifier="tabbarController" id="wrl-TU-SVj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FH2-5O-YC5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDI-1H-Stl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230" y="102"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nez-nv-8JS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6qG-PQ-4HQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="HXT-us-Wbc">
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                        <color key="selectedImageTintColor" systemColor="labelColor"/>
-                    </tabBar>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="YeX-ZZ-s8D" kind="relationship" relationship="viewControllers" id="KpR-lf-Wib"/>
-                        <segue destination="9Tw-6W-gqx" kind="relationship" relationship="viewControllers" id="Nc2-WE-CPo"/>
-                        <segue destination="WsJ-Dp-xBe" kind="relationship" relationship="viewControllers" id="IbC-Dj-bao"/>
+                        <segue destination="etp-0p-xNe" kind="relationship" relationship="rootViewController" id="yGq-I2-bJU"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u2x-WD-v7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hai-S5-JQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192" y="14"/>
+            <point key="canvasLocation" x="-367" y="-5"/>
         </scene>
-        <!--MyCarsScreen-->
-        <scene sceneID="tlw-lb-f4p">
+        <!--Main Screen View Controller-->
+        <scene sceneID="S8P-60-GR7">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyCars Screen" referencedIdentifier="MyCarsScreen" id="YeX-ZZ-s8D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Cars" image="car" catalog="system" id="KKo-hA-n2Y"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l80-1r-IEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="etp-0p-xNe" customClass="MainScreenViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pcb-CL-WUL">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="OdA-CA-5p3">
+                                <rect key="frame" x="0.0" y="103" width="430" height="795"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0aW-Ow-QjX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0aW-Ow-QjX" firstAttribute="trailing" secondItem="OdA-CA-5p3" secondAttribute="trailing" id="NIz-F5-GPA"/>
+                            <constraint firstItem="0aW-Ow-QjX" firstAttribute="bottom" secondItem="OdA-CA-5p3" secondAttribute="bottom" id="Q4A-YQ-sVi"/>
+                            <constraint firstItem="OdA-CA-5p3" firstAttribute="leading" secondItem="0aW-Ow-QjX" secondAttribute="leading" id="cKm-Ct-Soo"/>
+                            <constraint firstItem="OdA-CA-5p3" firstAttribute="top" secondItem="0aW-Ow-QjX" secondAttribute="top" id="lxY-2r-Yap"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Vsf-Kf-Sjb"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="OdA-CA-5p3" id="FK9-o2-m8q"/>
+                        <segue destination="wrl-TU-SVj" kind="show" identifier="showTabbarScreen" id="gZU-iN-KF6"/>
+                        <segue destination="Ww6-g0-ntY" kind="show" identifier="showLoginInScreen" id="Zr0-ua-5hG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txu-eY-t8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="-241"/>
+            <point key="canvasLocation" x="444" y="-5"/>
         </scene>
-        <!--ProfileScreen-->
-        <scene sceneID="CRo-GW-86k">
+        <!--loginScreen-->
+        <scene sceneID="HeT-qm-u4w">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile Screen" referencedIdentifier="ProfileScreen" id="9Tw-6W-gqx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="P1x-um-53b"/>
+                <viewControllerPlaceholder storyboardName="Login Screen" referencedIdentifier="loginScreen" id="Ww6-g0-ntY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DxN-iN-rKW"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iUW-6N-Bo1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FYc-We-bbm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="14"/>
-        </scene>
-        <!--AboutScreen-->
-        <scene sceneID="Dce-pQ-NCh">
-            <objects>
-                <viewControllerPlaceholder storyboardName="About Screen" referencedIdentifier="AboutScreen" id="WsJ-Dp-xBe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7cI-yC-WMc"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rDM-s2-oUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1117" y="246"/>
+            <point key="canvasLocation" x="1210" y="-95"/>
         </scene>
     </scenes>
     <resources>
-        <image name="car" catalog="system" width="128" height="95"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

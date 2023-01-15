@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,16 +75,15 @@
         <scene sceneID="OIS-RL-W4T">
             <objects>
                 <viewController id="AJd-PG-gal" customClass="ServicesAddServiceViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="ZMK-9h-LIH">
+                    <view key="view" contentMode="scaleToFill" id="ZMK-9h-LIH">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h35-RJ-4bh">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h35-RJ-4bh">
                                 <rect key="frame" x="0.0" y="155" width="430" height="777"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" red="0.79319274429999997" green="0.83745056389999994" blue="0.96472209689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bUo-eO-Be2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bUo-eO-Be2">
                                 <rect key="frame" x="154" y="464" width="132" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -180,9 +179,14 @@
                         <viewLayoutGuide key="safeArea" id="kTw-lh-cza"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
+                            <constraint firstItem="bUo-eO-Be2" firstAttribute="centerX" secondItem="h35-RJ-4bh" secondAttribute="centerX" id="ATc-3h-xwB"/>
+                            <constraint firstItem="h35-RJ-4bh" firstAttribute="top" secondItem="kTw-lh-cza" secondAttribute="top" id="AlR-Jf-KA4"/>
+                            <constraint firstAttribute="bottom" secondItem="h35-RJ-4bh" secondAttribute="bottom" id="Bnu-1Q-87q"/>
                             <constraint firstItem="c2d-bt-nai" firstAttribute="top" secondItem="kTw-lh-cza" secondAttribute="top" id="F9s-ac-N8m"/>
                             <constraint firstItem="bUo-eO-Be2" firstAttribute="top" secondItem="c2d-bt-nai" secondAttribute="bottom" constant="25" id="Vkq-xu-s4w"/>
                             <constraint firstItem="c2d-bt-nai" firstAttribute="leading" secondItem="kTw-lh-cza" secondAttribute="leading" constant="25" id="d2n-jb-cCF"/>
+                            <constraint firstItem="kTw-lh-cza" firstAttribute="trailing" secondItem="h35-RJ-4bh" secondAttribute="trailing" id="euT-qF-FaG"/>
+                            <constraint firstItem="h35-RJ-4bh" firstAttribute="leading" secondItem="kTw-lh-cza" secondAttribute="leading" id="lFO-OA-P9J"/>
                             <constraint firstItem="kTw-lh-cza" firstAttribute="trailing" secondItem="c2d-bt-nai" secondAttribute="trailing" constant="25" id="qUR-U2-e8g"/>
                             <constraint firstItem="bUo-eO-Be2" firstAttribute="centerX" secondItem="kTw-lh-cza" secondAttribute="centerX" id="yoA-nC-g11"/>
                         </constraints>
@@ -209,7 +213,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="tZO-eA-avy">
-                                <rect key="frame" x="0.0" y="155" width="430" height="777"/>
+                                <rect key="frame" x="0.0" y="155" width="429" height="777"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" red="0.79319274429999997" green="0.83745056389999994" blue="0.96472209689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
