@@ -22,17 +22,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fyb-g6-nin">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wu-BD-nQL">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wu-BD-nQL">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="Mzl-K4-zVR"/>
+                                                    <constraint firstAttribute="width" constant="85" id="Mzl-K4-zVR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFK-2H-e7E">
-                                                <rect key="frame" x="95" y="0.0" width="235" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OFK-2H-e7E">
+                                                <rect key="frame" x="100" y="0.0" width="230" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
@@ -42,16 +42,16 @@
                                         <rect key="frame" x="0.0" y="54" width="330" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaL-M4-LE2">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="1sM-Y2-DIv"/>
+                                                    <constraint firstAttribute="width" constant="85" id="1sM-Y2-DIv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nxB-nS-sqJ">
-                                                <rect key="frame" x="95" y="0.0" width="235" height="34"/>
+                                                <rect key="frame" x="100" y="0.0" width="230" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
@@ -61,16 +61,16 @@
                                         <rect key="frame" x="0.0" y="108" width="330" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6V3-Lk-vbc">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="63v-J7-GgY"/>
+                                                    <constraint firstAttribute="width" constant="85" id="63v-J7-GgY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dfD-RL-ODD">
-                                                <rect key="frame" x="95" y="0.0" width="235" height="34"/>
+                                                <rect key="frame" x="100" y="0.0" width="230" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -80,16 +80,16 @@
                                         <rect key="frame" x="0.0" y="162" width="330" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGZ-WG-iOW">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="elg-uL-Jr4"/>
+                                                    <constraint firstAttribute="width" constant="85" id="elg-uL-Jr4"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cY7-st-KeQ">
-                                                <rect key="frame" x="95" y="0.0" width="235" height="34"/>
+                                                <rect key="frame" x="100" y="0.0" width="230" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
@@ -99,16 +99,16 @@
                                         <rect key="frame" x="0.0" y="216" width="330" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhR-eT-baz">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="d34-Q3-aS3"/>
+                                                    <constraint firstAttribute="width" constant="85" id="d34-Q3-aS3"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovC-Ln-5s5">
-                                                <rect key="frame" x="95" y="0.0" width="235" height="34"/>
+                                                <rect key="frame" x="100" y="0.0" width="230" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -140,9 +140,9 @@
                     <connections>
                         <outlet property="addressTF" destination="ovC-Ln-5s5" id="djv-je-KDs"/>
                         <outlet property="ageTF" destination="cY7-st-KeQ" id="cTD-s8-GhU"/>
-                        <outlet property="emailTF" destination="OFK-2H-e7E" id="YI8-ck-I5C"/>
                         <outlet property="fullnameTF" destination="dfD-RL-ODD" id="gDK-gX-ods"/>
                         <outlet property="passwordTF" destination="nxB-nS-sqJ" id="RUU-bP-LJf"/>
+                        <outlet property="usernameTF" destination="OFK-2H-e7E" id="YI8-ck-I5C"/>
                         <segue destination="D4T-fE-47v" kind="unwind" identifier="unwind" unwindAction="unwindToMainScreen:" id="mgL-zO-gHD"/>
                     </connections>
                 </viewController>

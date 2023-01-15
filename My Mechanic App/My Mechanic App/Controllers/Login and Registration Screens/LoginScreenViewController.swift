@@ -5,7 +5,7 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
     var isSignInSuccessful: Bool = true
     var storedProfiles: [Profile] = []
     
-    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
     override func viewDidLoad() {
@@ -14,7 +14,7 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.isHidden = true
         
-        emailTF.delegate = self
+        usernameTF.delegate = self
         passwordTF.delegate = self
     }
     
@@ -26,7 +26,7 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
     @IBAction func onSignIn(_ sender: UIButton) {
         var counter: Int = 0
         for profile in storedProfiles {
-            if profile.email == emailTF.text && profile.password == passwordTF.text {
+            if profile.username == usernameTF.text && profile.password == passwordTF.text {
                 isSignInSuccessful = true
                 UserDefaults.standard.setValue(isSignInSuccessful, forKey: "isLoggedIn")
                 selectedProfileIndex = counter

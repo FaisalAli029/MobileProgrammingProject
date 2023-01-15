@@ -3,7 +3,7 @@ import UIKit
 class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var fullNameLabel: UITextField!
-    @IBOutlet weak var emailLabel: UITextField!
+    @IBOutlet weak var usernameLabel: UITextField!
     @IBOutlet weak var ageLabel: UITextField!
     @IBOutlet weak var addressLabel: UITextField!
     
@@ -16,7 +16,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         sender.title = isEditingProfile ? "Done" : "Edit"
         
         fullNameLabel.isEnabled = isEditingProfile
-        emailLabel.isEnabled = isEditingProfile
+        usernameLabel.isEnabled = isEditingProfile
         ageLabel.isEnabled = isEditingProfile
         addressLabel.isEnabled = isEditingProfile
         
@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         fullNameLabel.delegate = self
-        emailLabel.delegate = self
+        usernameLabel.delegate = self
         ageLabel.delegate = self
         addressLabel.delegate = self
         
@@ -39,7 +39,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         myProfile = profilesData[selectedProfileIndex]
         
         fullNameLabel.text = myProfile!.fullName
-        emailLabel.text = myProfile!.email
+        usernameLabel.text = myProfile!.username
         ageLabel.text = myProfile!.age
         addressLabel.text = myProfile!.address
     }
@@ -67,7 +67,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func onEmailChanged(_ sender: UITextField) {
         //print(sender.text!)
-        myProfile!.email = sender.text!
+        myProfile!.username = sender.text!
     }
     
     @IBAction func onAgeChanged(_ sender: UITextField) {

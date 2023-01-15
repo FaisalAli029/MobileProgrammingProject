@@ -11,12 +11,12 @@ class MainScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        print(profilesData)
+        //print(profilesData)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
-        print(isLoggedIn)
+        //print(isLoggedIn)
         if isLoggedIn {
             performSegue(withIdentifier: "showTabbarScreen", sender: self)
         } else {

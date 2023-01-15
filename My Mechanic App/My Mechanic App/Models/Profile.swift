@@ -1,7 +1,7 @@
 import Foundation
 
 struct Profile: Codable {
-    var email: String
+    var username: String
     var password: String
     var fullName: String
     var age: String

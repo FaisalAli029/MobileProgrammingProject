@@ -215,7 +215,7 @@ func checkUserExistence(userInfo: Profile) -> Bool {
     let profilesStored: [Profile] = readUsersListStored()
     
     for profile in profilesStored {
-        if userInfo.email == profile.email {
+        if userInfo.username == profile.username {
             return true
         }
     }
@@ -244,7 +244,7 @@ func registerUserInfo(profileInfo: Profile) {
 
 // Updates the current user's information
 func updateUserProfile(updatedProfile: Profile) {
-    profilesData[selectedProfileIndex].email = updatedProfile.email
+    profilesData[selectedProfileIndex].username = updatedProfile.username
     profilesData[selectedProfileIndex].fullName = updatedProfile.fullName
     profilesData[selectedProfileIndex].age = updatedProfile.age
     profilesData[selectedProfileIndex].address = updatedProfile.address

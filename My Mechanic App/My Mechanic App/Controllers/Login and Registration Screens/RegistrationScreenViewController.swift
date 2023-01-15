@@ -2,7 +2,7 @@ import UIKit
 
 class RegistrationScreenViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var fullnameTF: UITextField!
     @IBOutlet weak var ageTF: UITextField!
@@ -12,7 +12,7 @@ class RegistrationScreenViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        emailTF.delegate = self
+        usernameTF.delegate = self
         passwordTF.delegate = self
         fullnameTF.delegate = self
         ageTF.delegate = self
@@ -27,7 +27,7 @@ class RegistrationScreenViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func onRegister(_ sender: UIButton) {
         let myNewProfile: Profile = Profile(
-            email: emailTF.text ?? "",
+            username: usernameTF.text ?? "",
             password: passwordTF.text ?? "",
             fullName: fullnameTF.text ?? "",
             age: ageTF.text ?? "",

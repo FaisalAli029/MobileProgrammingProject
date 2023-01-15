@@ -37,17 +37,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YhY-Yf-pMQ">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-zV-N8a">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-zV-N8a">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="75" id="igl-By-FIB"/>
+                                                    <constraint firstAttribute="width" constant="85" id="igl-By-FIB"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nAT-mZ-QAx">
-                                                <rect key="frame" x="90" y="0.0" width="240" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nAT-mZ-QAx">
+                                                <rect key="frame" x="100" y="0.0" width="230" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
@@ -57,16 +57,16 @@
                                         <rect key="frame" x="0.0" y="54" width="330" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fml-k1-iGo">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="75" id="rHG-h2-8BO"/>
+                                                    <constraint firstAttribute="width" constant="85" id="rHG-h2-8BO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sfm-e7-kty">
-                                                <rect key="frame" x="90" y="0.0" width="240" height="34"/>
+                                                <rect key="frame" x="100" y="0.0" width="230" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
@@ -109,8 +109,8 @@
                         <barButtonItem key="rightBarButtonItem" title="Register" id="I7g-Fk-S1h"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailTF" destination="nAT-mZ-QAx" id="0XY-fW-qYQ"/>
                         <outlet property="passwordTF" destination="sfm-e7-kty" id="VfN-fp-G9q"/>
+                        <outlet property="usernameTF" destination="nAT-mZ-QAx" id="0XY-fW-qYQ"/>
                         <segue destination="voV-SD-XgH" kind="unwind" identifier="unwind" unwindAction="unwindToMainScreen:" id="c6Y-dN-r4b"/>
                     </connections>
                 </viewController>
