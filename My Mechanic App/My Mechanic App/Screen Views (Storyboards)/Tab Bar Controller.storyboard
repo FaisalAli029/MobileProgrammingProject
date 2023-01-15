@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller View Controller-->
+        <scene sceneID="zjZ-Cp-ROe">
+            <objects>
+                <tabBarController storyboardIdentifier="tabbarController" id="aEs-Hy-eLa" customClass="TabBarControllerViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="fKS-pf-kUB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tgV-7Z-mPb" kind="relationship" relationship="viewControllers" id="AHr-8I-2xo"/>
+                        <segue destination="1oq-fu-mCK" kind="relationship" relationship="viewControllers" id="j94-Ot-njk"/>
+                        <segue destination="aOi-GT-m4A" kind="relationship" relationship="viewControllers" id="XcX-mi-0w4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lnw-MQ-zCZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="13"/>
+        </scene>
+        <!--MyCarsScreen-->
+        <scene sceneID="5YI-cg-jmW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyCars Screen" referencedIdentifier="MyCarsScreen" id="tgV-7Z-mPb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Cars" image="car" catalog="system" id="OzY-zh-7gn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vSu-H6-asp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="-241"/>
+        </scene>
+        <!--ProfileScreen-->
+        <scene sceneID="jz3-cK-Lfy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile Screen" referencedIdentifier="ProfileScreen" id="1oq-fu-mCK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="GIx-gF-oqg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iUS-99-pcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101" y="14"/>
+        </scene>
+        <!--AboutScreen-->
+        <scene sceneID="Q9R-Db-8hw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="About Screen" referencedIdentifier="AboutScreen" id="aOi-GT-m4A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="D4R-Mm-2YF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGl-Nn-0gC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1099" y="245"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car" catalog="system" width="128" height="95"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -2,14 +2,13 @@
 
 import Foundation
 
-let carFileName: String = "carsData"
 let userInfoFileName: String = "userInfo"
 
 
 
-// [[ MANAGING CARS ]]
+// [[ MANAGING USER'S CARS ]]
 
-// Read data from local storage and returns it
+// Read the user's car data from local storage and returns it
 func readCarsData() -> [Car] {
     
     var tempCarList: [Car] = []
@@ -20,13 +19,13 @@ func readCarsData() -> [Car] {
     ).first!
     
     let archiveURL = documentsDirectory
-        .appendingPathComponent(carFileName)
+        .appendingPathComponent(userInfoFileName)
         .appendingPathExtension("plist")
     
     let propertyListDecoder = PropertyListDecoder()
     
     if let retrievedData = try? Data(contentsOf: archiveURL),
-       let decodedData = try? propertyListDecoder.decode(Array<Car>.self, from: retrievedData) {
+       let decodedData = try? propertyListDecoder.decode(Array<Profile>.self, from: retrievedData) {
         
         //var counter: Int = 1
         //for data in decodedData {
@@ -37,7 +36,7 @@ func readCarsData() -> [Car] {
         //    counter += 1
         //}
         
-        for data in decodedData {
+        for data in decodedData[selectedProfileIndex].carsList {
             tempCarList.append(data)
         }
     }
@@ -45,9 +44,10 @@ func readCarsData() -> [Car] {
     return tempCarList
 }
 
-// Adds a car to the global [My Cars] variable and then saves it to the local storage
+// Adds a car to the global [My Cars] variable and then saves it to the local storage (for the user)
 func addCarToLocalStorage(carData: Car) {
-    myCarsData.append(carData)
+    profilesData[selectedProfileIndex].carsList.append(carData)
+    myCarsData = profilesData[selectedProfileIndex].carsList
     
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
@@ -55,18 +55,19 @@ func addCarToLocalStorage(carData: Car) {
     ).first!
     
     let archiveURL = documentsDirectory
-        .appendingPathComponent(carFileName)
+        .appendingPathComponent(userInfoFileName)
         .appendingPathExtension("plist")
     
     let propertyListEncoder = PropertyListEncoder()
     
-    let encodedData = try? propertyListEncoder.encode(myCarsData)
+    let encodedData = try? propertyListEncoder.encode(profilesData)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
 
 // Overwrites the carsList both on local storage and the global variable
 func updateCarsListStored(carsList: [Car]) {
     myCarsData = carsList
+    profilesData[selectedProfileIndex].carsList = myCarsData
     
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
@@ -74,12 +75,12 @@ func updateCarsListStored(carsList: [Car]) {
     ).first!
     
     let archiveURL = documentsDirectory
-        .appendingPathComponent(carFileName)
+        .appendingPathComponent(userInfoFileName)
         .appendingPathExtension("plist")
     
     let propertyListEncoder = PropertyListEncoder()
     
-    let encodedData = try? propertyListEncoder.encode(myCarsData)
+    let encodedData = try? propertyListEncoder.encode(profilesData)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
 
@@ -93,28 +94,31 @@ func updateCar(newCar: Car) {
     myCarsData[selectedCarIndex].mileage = newCar.mileage
     myCarsData[selectedCarIndex].cost = newCar.cost
     
+    profilesData[selectedProfileIndex].carsList[selectedCarIndex] = myCarsData[selectedCarIndex]
+    
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
         in: .userDomainMask
     ).first!
 
     let archiveURL = documentsDirectory
-        .appendingPathComponent(carFileName)
+        .appendingPathComponent(userInfoFileName)
         .appendingPathExtension("plist")
 
     let propertyListEncoder = PropertyListEncoder()
 
-    let encodedData = try? propertyListEncoder.encode(myCarsData)
+    let encodedData = try? propertyListEncoder.encode(profilesData)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
 
 
 
-// [[ MANAGING SERVICES ]]
+// [[ MANAGING USER'S SERVICES ]]
 
 // Adds a service to the globally selected car (using an index) and then overwrites the carsList that is stored locally
 func addServiceToLocalStorage(serviceData: Service) {
     myCarsData[selectedCarIndex].servicesList.append(serviceData)
+    profilesData[selectedProfileIndex].carsList[selectedCarIndex].servicesList = myCarsData[selectedCarIndex].servicesList
     
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
@@ -122,18 +126,19 @@ func addServiceToLocalStorage(serviceData: Service) {
     ).first!
     
     let archiveURL = documentsDirectory
-        .appendingPathComponent(carFileName)
+        .appendingPathComponent(userInfoFileName)
         .appendingPathExtension("plist")
     
     let propertyListEncoder = PropertyListEncoder()
     
-    let encodedData = try? propertyListEncoder.encode(myCarsData)
+    let encodedData = try? propertyListEncoder.encode(profilesData)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
 
 // Overwrites the servicesList of the selected car both on local storage and the global variable
 func updateSerivcesListStored(servicesList: [Service]) {
     myCarsData[selectedCarIndex].servicesList = servicesList
+    profilesData[selectedProfileIndex].carsList[selectedCarIndex].servicesList = servicesList
     
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
@@ -141,12 +146,12 @@ func updateSerivcesListStored(servicesList: [Service]) {
     ).first!
     
     let archiveURL = documentsDirectory
-        .appendingPathComponent(carFileName)
+        .appendingPathComponent(userInfoFileName)
         .appendingPathExtension("plist")
     
     let propertyListEncoder = PropertyListEncoder()
     
-    let encodedData = try? propertyListEncoder.encode(myCarsData)
+    let encodedData = try? propertyListEncoder.encode(profilesData)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
 
@@ -158,18 +163,20 @@ func updateService(newService: Service) {
     myCarsData[selectedCarIndex].servicesList[selectedServiceIndex].serviceCost = newService.serviceCost
     myCarsData[selectedCarIndex].servicesList[selectedServiceIndex].isDone = newService.isDone
     
+    profilesData[selectedProfileIndex].carsList[selectedCarIndex].servicesList = myCarsData[selectedCarIndex].servicesList
+    
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
         in: .userDomainMask
     ).first!
 
     let archiveURL = documentsDirectory
-        .appendingPathComponent(carFileName)
+        .appendingPathComponent(userInfoFileName)
         .appendingPathExtension("plist")
 
     let propertyListEncoder = PropertyListEncoder()
 
-    let encodedData = try? propertyListEncoder.encode(myCarsData)
+    let encodedData = try? propertyListEncoder.encode(profilesData)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
 
@@ -178,14 +185,8 @@ func updateService(newService: Service) {
 // [[ MANAGING PROFILE INFO ]]
 
 // Reads user's info and then returns it
-func readUserInfo() -> Profile {
-    
-    var myProfile: Profile = Profile(
-        fullName: "",
-        email: "",
-        age: "",
-        address: ""
-    )
+func readUsersListStored() -> [Profile] {
+    var tempProfilesList: [Profile] = []
     
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
@@ -199,14 +200,33 @@ func readUserInfo() -> Profile {
     let propertyListDecoder = PropertyListDecoder()
     
     if let retrievedUserInfo = try? Data(contentsOf: archiveURL),
-       let decodedUserInfo = try? propertyListDecoder.decode(Profile.self, from: retrievedUserInfo) {
-        myProfile = decodedUserInfo
+       let decodedUserInfo = try? propertyListDecoder.decode(Array<Profile>.self, from: retrievedUserInfo) {
+        for data in decodedUserInfo {
+            tempProfilesList.append(data)
+        }
     }
     
-    return myProfile
+    return tempProfilesList
 }
 
-func saveUserInfo(profileInfo: Profile) {
+// Checks if a user already exists
+func checkUserExistence(userInfo: Profile) -> Bool {
+    let userExists: Bool = false
+    let profilesStored: [Profile] = readUsersListStored()
+    
+    for profile in profilesStored {
+        if userInfo.username == profile.username {
+            return true
+        }
+    }
+    
+    return userExists
+}
+
+// Register a new user
+func registerUserInfo(profileInfo: Profile) {
+    profilesData.append(profileInfo)
+    
     let documentsDirectory = FileManager.default.urls(
         for: .documentDirectory,
         in: .userDomainMask
@@ -218,6 +238,28 @@ func saveUserInfo(profileInfo: Profile) {
 
     let propertyListEncoder = PropertyListEncoder()
 
-    let encodedData = try? propertyListEncoder.encode(profileInfo)
+    let encodedData = try? propertyListEncoder.encode(profilesData)
+    try? encodedData?.write(to: archiveURL, options: .noFileProtection)
+}
+
+// Updates the current user's information
+func updateUserProfile(updatedProfile: Profile) {
+    profilesData[selectedProfileIndex].username = updatedProfile.username
+    profilesData[selectedProfileIndex].fullName = updatedProfile.fullName
+    profilesData[selectedProfileIndex].age = updatedProfile.age
+    profilesData[selectedProfileIndex].address = updatedProfile.address
+    
+    let documentsDirectory = FileManager.default.urls(
+        for: .documentDirectory,
+        in: .userDomainMask
+    ).first!
+
+    let archiveURL = documentsDirectory
+        .appendingPathComponent(userInfoFileName)
+        .appendingPathExtension("plist")
+
+    let propertyListEncoder = PropertyListEncoder()
+
+    let encodedData = try? propertyListEncoder.encode(profilesData)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
