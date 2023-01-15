@@ -10,6 +10,8 @@ class MainScreenViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.navigationItem.setHidesBackButton(true, animated: true)
+        
+        print(profilesData)
     }
     
     override func viewDidAppear(_ animated: Bool) {

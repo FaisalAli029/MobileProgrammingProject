@@ -241,3 +241,25 @@ func registerUserInfo(profileInfo: Profile) {
     let encodedData = try? propertyListEncoder.encode(profilesData)
     try? encodedData?.write(to: archiveURL, options: .noFileProtection)
 }
+
+// Updates the current user's information
+func updateUserProfile(updatedProfile: Profile) {
+    profilesData[selectedProfileIndex].email = updatedProfile.email
+    profilesData[selectedProfileIndex].fullName = updatedProfile.fullName
+    profilesData[selectedProfileIndex].age = updatedProfile.age
+    profilesData[selectedProfileIndex].address = updatedProfile.address
+    
+    let documentsDirectory = FileManager.default.urls(
+        for: .documentDirectory,
+        in: .userDomainMask
+    ).first!
+
+    let archiveURL = documentsDirectory
+        .appendingPathComponent(userInfoFileName)
+        .appendingPathExtension("plist")
+
+    let propertyListEncoder = PropertyListEncoder()
+
+    let encodedData = try? propertyListEncoder.encode(profilesData)
+    try? encodedData?.write(to: archiveURL, options: .noFileProtection)
+}

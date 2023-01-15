@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         
         // When user clicks 'done', save the data
         if !isEditingProfile {
-            registerUserInfo(profileInfo: myProfile!)
+            updateUserProfile(updatedProfile: myProfile!)
         }
     }
     
@@ -36,8 +36,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         addressLabel.delegate = self
         
         // Read user data from local storage
-        //myProfile = readUserInfo()
-        myProfile = Profile(email: "", password: "", fullName: "", age: "", address: "", carsList: [])
+        myProfile = profilesData[selectedProfileIndex]
         
         fullNameLabel.text = myProfile!.fullName
         emailLabel.text = myProfile!.email
