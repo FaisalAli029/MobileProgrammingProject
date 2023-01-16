@@ -9,6 +9,7 @@ class ServicesMainScreenViewController: UITableViewController, UISearchBarDelega
     
     var servicesList: [Service] = []
     
+    // This is the going to be the arraylist for the services when the search bar is in use
     var filteredServices = myCarsData[selectedCarIndex].servicesList
     
     // When edit button is clicked, it will show hamburger icon to manually sort or delete services
@@ -45,6 +46,7 @@ class ServicesMainScreenViewController: UITableViewController, UISearchBarDelega
         myServicesTableView.dataSource = self
     }
     
+    // This initilizer for the search bar in the services list
     func initSearchController() {
         searchController.loadViewIfNeeded()
         searchController.searchResultsUpdater = self
@@ -136,6 +138,7 @@ extension ServicesMainScreenViewController {
         }
     }
     
+    // this updates the services list based on the search bar
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         
@@ -146,6 +149,7 @@ extension ServicesMainScreenViewController {
         filterForSearchTextAndSearchButton(searchText: searchText, scopeButton: scopeButton)
     }
     
+    // this function houses the logic for the service list should be updated based on the user's input in the search bar
     func filterForSearchTextAndSearchButton(searchText: String, scopeButton: String = "All") {
         filteredServices = myCarsData[selectedCarIndex].servicesList.filter({ service in
             var searchTextMatch: Bool = true

@@ -231,7 +231,7 @@ extension MyCarsMainScreenViewController: UITableViewDelegate, UITableViewDataSo
         filterForSearchTextAndSearchButton(searchText: searchText, scopeButton: scopeButton)
     }
     
-    //
+    // this function houses the logic for how the cars list should be updated based on the user's input in the search bar
     func filterForSearchTextAndSearchButton(searchText: String, scopeButton: String = "All") {
         filteredCarsList = myCarsList.filter({ car in
             var searchTextMatch: Bool = true
