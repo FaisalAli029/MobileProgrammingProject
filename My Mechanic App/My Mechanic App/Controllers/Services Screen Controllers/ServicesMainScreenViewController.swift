@@ -65,6 +65,67 @@ class ServicesMainScreenViewController: UITableViewController, UISearchBarDelega
     override func viewWillAppear(_ animated: Bool) {
         servicesList = myCarsData[selectedCarIndex].servicesList
         myServicesTableView.reloadData()
+        
+        for car in myCarsData {
+            notifications(myCar: car)
+        }
+    }
+    
+    func notifications(myCar: Car) {
+        var carManufacturer: String
+        var serviceTitle: String
+        var serviceDate: Date
+        var serviceCost: Double
+        
+        carManufacturer = myCar.manufacturer
+        
+        for service in myCar.servicesList {
+            if !service.isDone {
+                
+                serviceTitle = service.title
+                serviceDate = service.date
+                serviceCost = service.serviceCost
+                
+                let center = UNUserNotificationCenter.current()
+                center.requestAuthorization(
+                    options: [.alert, .badge, .sound]) { (granted, error) in
+                        //error != nil ? print(error!) : nil
+                }
+                
+                dateFormatter.dateFormat = "yyyy-MM-dd @ HH:mm"
+                let dateStr: String = dateFormatter.string(from: serviceDate)
+                
+                let content = UNMutableNotificationContent()
+                content.title = "Service pending: \(serviceTitle) for \(carManufacturer)"
+                content.body = """
+                Your service is scheduled for \(dateStr).
+                The total cost of the service is BHD \(serviceCost).
+                """
+                
+                let date: Date = serviceDate
+                
+                let dateComponents = Calendar.current.dateComponents(
+                    [.year, .month, .day, .hour, .minute, .second],
+                    from: date
+                )
+                
+                let trigger = UNCalendarNotificationTrigger(
+                    dateMatching: dateComponents,
+                    repeats: false
+                )
+                
+                let notificationID = UUID().uuidString
+                let request = UNNotificationRequest(
+                    identifier: notificationID,
+                    content: content,
+                    trigger: trigger
+                )
+                
+                center.add(request) {
+                    (error) in
+                }
+            }
+        }
     }
 }
 
