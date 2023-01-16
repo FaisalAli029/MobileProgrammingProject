@@ -12,14 +12,38 @@ class ServicesAddServiceViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .dateAndTime
+        datePicker.addTarget(self,
+                             action: #selector(dateChange(datePicker:)),
+                             for: UIControl.Event.valueChanged
+        )
+        datePicker.frame.size = CGSize(width: 0, height: 300)
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.minimumDate = Date()
+        
+        dateTF.inputView = datePicker
+        dateTF.text = formatDate(date: Date())
     }
     
+    @objc func dateChange(datePicker: UIDatePicker) {
+        dateTF.text = formatDate(date: datePicker.date)
+    }
+        
+    func formatDate(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd @ HH:mm"
+        return formatter.string(from: date)
+    }
+    
+    // Saves the service to storage
     @IBAction func addServiceBtnClicked(_ sender: UIButton) {
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd @ HH:mm"
+        let date: Date = dateFormatter.date(from: dateTF.text!) ?? Date.now
         
         newService = Service(
             title: (titleTF.text == nil || titleTF.text == "") ? "Untitled Service" : titleTF.text!,
-            date: dateFormatter.date(from: dateTF.text ?? "2023-05-05") ?? Date(), // default date: 2023-05-05
+            date: date,
             serviceMileage: Double(mileageTF.text ?? "0.0") ?? 0.0,
             serviceCost: Double(costTF.text ?? "0.0") ?? 0.0,
             isDone: false

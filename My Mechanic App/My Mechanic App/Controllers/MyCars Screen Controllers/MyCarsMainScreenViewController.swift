@@ -28,65 +28,59 @@ class MyCarsMainScreenViewController: UIViewController {
         myCarsTableView.dataSource = self
     }
     
-    func notifications(myCar: Car) {
-        var carManufacturer: String
-        var serviceTitle: String
-        var serviceDate: Date
-        var serviceCost: Double
-        
-        carManufacturer = myCar.manufacturer
-        
-        for service in myCar.servicesList {
-            if !service.isDone {
-                
-                serviceTitle = service.title
-                serviceDate = service.date
-                serviceCost = service.serviceCost
-                
-                let center = UNUserNotificationCenter.current()
-                center.requestAuthorization(
-                    options: [.alert, .badge, .sound]) { (granted, error) in
-                        //error != nil ? print(error!) : nil
-                }
-                
-                let content = UNMutableNotificationContent()
-                content.title = "\(serviceTitle) for \(carManufacturer) due tomorrow"
-                content.body = """
-                Your service is scheduled for \(serviceDate).
-                The total cost of the service is BHD \(serviceCost).
-                """
-                
-                // Use this date for testing
-                //let date = Date().addingTimeInterval(10)
-                
-                var date: Date = Date()
-                if let tempDate = Calendar.current.date(byAdding: .day, value: -1, to: serviceDate) {
-                    date = tempDate
-                }
-                
-                let dateComponents = Calendar.current.dateComponents(
-                    [.year, .month, .day, .hour, .minute, .second],
-                    from: date
-                )
-                
-                let trigger = UNCalendarNotificationTrigger(
-                    dateMatching: dateComponents,
-                    repeats: false
-                )
-                
-                let notificationID = UUID().uuidString
-                let request = UNNotificationRequest(
-                    identifier: notificationID,
-                    content: content,
-                    trigger: trigger
-                )
-                
-                center.add(request) {
-                    (error) in
-                }
-            }
-        }
-    }
+//    func notifications(myCar: Car) {
+//        var carManufacturer: String
+//        var serviceTitle: String
+//        var serviceDate: Date
+//        var serviceCost: Double
+//
+//        carManufacturer = myCar.manufacturer
+//
+//        for service in myCar.servicesList {
+//            if !service.isDone {
+//
+//                serviceTitle = service.title
+//                serviceDate = service.date
+//                serviceCost = service.serviceCost
+//
+//                let center = UNUserNotificationCenter.current()
+//                center.requestAuthorization(
+//                    options: [.alert, .badge, .sound]) { (granted, error) in
+//                        //error != nil ? print(error!) : nil
+//                }
+//
+//                let content = UNMutableNotificationContent()
+//                content.title = "Service pending: \(serviceTitle) for \(carManufacturer)"
+//                content.body = """
+//                Your service is scheduled for \(serviceDate).
+//                The total cost of the service is BHD \(serviceCost).
+//                """
+//
+//                let date: Date = serviceDate
+//
+//                let dateComponents = Calendar.current.dateComponents(
+//                    [.year, .month, .day, .hour, .minute, .second],
+//                    from: date
+//                )
+//
+//                let trigger = UNCalendarNotificationTrigger(
+//                    dateMatching: dateComponents,
+//                    repeats: false
+//                )
+//
+//                let notificationID = UUID().uuidString
+//                let request = UNNotificationRequest(
+//                    identifier: notificationID,
+//                    content: content,
+//                    trigger: trigger
+//                )
+//
+//                center.add(request) {
+//                    (error) in
+//                }
+//            }
+//        }
+//    }
     
     // When user is redirected to this screen from any other screen like: 'Add Car' screen
     // the table data should be updated (reloaded)
@@ -98,9 +92,9 @@ class MyCarsMainScreenViewController: UIViewController {
         myCarsData = myCarsList
         myCarsTableView.reloadData()
         
-        for car in myCarsData {
-            notifications(myCar: car)
-        }
+//        for car in myCarsData {
+//            notifications(myCar: car)
+//        }
     }
     
     // When user adds a new car, the user will be redirected from the 'add car' screen to here with the updated cars list
