@@ -56,7 +56,7 @@ class ServicesMainScreenViewController: UITableViewController, UISearchBarDelega
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        searchController.searchBar.scopeButtonTitles = ["All", "Title A-Z", "Title Z-A", "Recent-Old", "Old-Recent"]
+        searchController.searchBar.scopeButtonTitles = ["All", "Title(Asc)", "Title(Desc)", "Date(Asc)", "Date(Desc)"]
         searchController.searchBar.delegate = self
     }
     
@@ -154,14 +154,14 @@ extension ServicesMainScreenViewController {
             }
             return searchTextMatch
         })
-        if(scopeButton.lowercased() == "title a-z") {
+        if(scopeButton.lowercased() == "title(asc)") {
             filteredServices = filteredServices.sorted { $0.title.lowercased() < $1.title.lowercased() }
-        }else if (scopeButton.lowercased() == "title z-a") {
+        }else if (scopeButton.lowercased() == "title(desc)") {
             filteredServices = filteredServices.sorted { $0.title.lowercased() > $1.title.lowercased() }
-        }else if (scopeButton.lowercased() == "recent-old") {
-            filteredServices = filteredServices.sorted { $0.date > $1.date }
-        }else if (scopeButton.lowercased() == "old-recent") {
-            filteredServices = filteredServices.sorted { $0.date < $1.date}
+        }else if (scopeButton.lowercased() == "date(asc)") {
+            filteredServices = filteredServices.sorted { $0.date < $1.date }
+        }else if (scopeButton.lowercased() == "date(desc)") {
+            filteredServices = filteredServices.sorted { $0.date > $1.date}
         }
         myServicesTableView.reloadData()
     }
