@@ -1,11 +1,15 @@
 import UIKit
 
-class ServicesMainScreenViewController: UITableViewController {
+class ServicesMainScreenViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
     
     @IBOutlet var myServicesTableView: UITableView!
     @IBOutlet weak var addBtn: UIBarButtonItem!
     
+    let searchController = UISearchController()
+    
     var servicesList: [Service] = []
+    
+    var filteredServices = myCarsData[selectedCarIndex].servicesList
     
     // When edit button is clicked, it will show hamburger icon to manually sort or delete services
     @IBAction func editBtnClicked(_ sender: UIBarButtonItem) {
@@ -21,6 +25,7 @@ class ServicesMainScreenViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initSearchController()
         //print("")
         //var counter: Int = 1
         //for service in servicesList {
@@ -40,6 +45,21 @@ class ServicesMainScreenViewController: UITableViewController {
         myServicesTableView.dataSource = self
     }
     
+    func initSearchController() {
+        searchController.loadViewIfNeeded()
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.enablesReturnKeyAutomatically = false
+        searchController.searchBar.returnKeyType = UIReturnKeyType.done
+        searchController.searchBar.placeholder = "Title, Date"
+        definesPresentationContext = true
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.scopeButtonTitles = ["All", "Title A-Z", "Title Z-A", "Recent-Old", "Old-Recent"]
+        searchController.searchBar.delegate = self
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         servicesList = myCarsData[selectedCarIndex].servicesList
         myServicesTableView.reloadData()
@@ -51,7 +71,10 @@ extension ServicesMainScreenViewController {
     
     // Total number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        servicesList.count
+        if (searchController.isActive) {
+            return filteredServices.count
+        }
+        return servicesList.count
     }
     
     // Shows cell data and removes other cells from memory if they are NOT visible
@@ -63,8 +86,13 @@ extension ServicesMainScreenViewController {
         
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
-        cell.title.text = servicesList[indexPath.row].title
-        cell.date.text = dateFormatter.string(from: servicesList[indexPath.row].date)
+        if (searchController.isActive) {
+            cell.title.text = filteredServices[indexPath.row].title
+            cell.date.text = dateFormatter.string(from: filteredServices[indexPath.row].date)
+        }else{
+            cell.title.text = servicesList[indexPath.row].title
+            cell.date.text = dateFormatter.string(from: servicesList[indexPath.row].date)
+        }
         
         return cell
     }
@@ -106,5 +134,35 @@ extension ServicesMainScreenViewController {
         } else if editingStyle == .insert {
             // do nothing
         }
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        
+        let scopeButton = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        
+        let searchText = searchBar.text!
+        
+        filterForSearchTextAndSearchButton(searchText: searchText, scopeButton: scopeButton)
+    }
+    
+    func filterForSearchTextAndSearchButton(searchText: String, scopeButton: String = "All") {
+        filteredServices = myCarsData[selectedCarIndex].servicesList.filter({ service in
+            var searchTextMatch: Bool = true
+            if (searchController.searchBar.text != "") {
+                searchTextMatch = (service.title.lowercased().contains(searchText.lowercased()) || service.date.description.contains(searchText))
+            }
+            return searchTextMatch
+        })
+        if(scopeButton.lowercased() == "title a-z") {
+            filteredServices = filteredServices.sorted { $0.title.lowercased() < $1.title.lowercased() }
+        }else if (scopeButton.lowercased() == "title z-a") {
+            filteredServices = filteredServices.sorted { $0.title.lowercased() > $1.title.lowercased() }
+        }else if (scopeButton.lowercased() == "recent-old") {
+            filteredServices = filteredServices.sorted { $0.date > $1.date }
+        }else if (scopeButton.lowercased() == "old-recent") {
+            filteredServices = filteredServices.sorted { $0.date < $1.date}
+        }
+        myServicesTableView.reloadData()
     }
 }
