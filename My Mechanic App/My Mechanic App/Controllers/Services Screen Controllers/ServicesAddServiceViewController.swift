@@ -4,6 +4,7 @@ class ServicesAddServiceViewController: UIViewController {
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var dateTF: UITextField!
     @IBOutlet weak var mileageTF: UITextField!
+    @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var costTF: UITextField!
     
     var newService: Service?
@@ -26,19 +27,24 @@ class ServicesAddServiceViewController: UIViewController {
         dateTF.text = formatDate(date: Date())
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        costLabel.text = "Service cost (\(getCurrencyStr()))"
+        costTF.placeholder = "E.g. \(getCurrencyStr()) 13.000"
+    }
+    
     @objc func dateChange(datePicker: UIDatePicker) {
         dateTF.text = formatDate(date: datePicker.date)
     }
         
     func formatDate(date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd @ HH:mm"
+        formatter.dateFormat = "yyyy-MM-dd @ \(getTimeFormatStr())"
         return formatter.string(from: date)
     }
     
     // Saves the service to storage
     @IBAction func addServiceBtnClicked(_ sender: UIButton) {
-        dateFormatter.dateFormat = "yyyy-MM-dd @ HH:mm"
+        dateFormatter.dateFormat = "yyyy-MM-dd @ \(getTimeFormatStr())"
         let date: Date = dateFormatter.date(from: dateTF.text!) ?? Date.now
         
         newService = Service(
@@ -48,6 +54,11 @@ class ServicesAddServiceViewController: UIViewController {
             serviceCost: Double(costTF.text ?? "0.0") ?? 0.0,
             isDone: false
         )
+        
+        // If USD is selected
+        if currency == 1 {
+            newService?.serviceCost = convertToBHD(value: Double(costTF.text!) ?? 0.0)
+        }
         
         addServiceToLocalStorage(serviceData: newService!)
     }

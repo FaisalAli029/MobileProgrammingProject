@@ -1,11 +1,20 @@
 import UIKit
 
 class ProfileViewController: UIViewController, UITextFieldDelegate {
-    
     @IBOutlet weak var fullNameLabel: UITextField!
     @IBOutlet weak var usernameLabel: UITextField!
     @IBOutlet weak var ageLabel: UITextField!
     @IBOutlet weak var addressLabel: UITextField!
+    @IBOutlet weak var timeFormatSegment: UISegmentedControl!
+    @IBOutlet weak var currencySegment: UISegmentedControl!
+    
+    @IBAction func timeFormatValueChanged(_ sender: UISegmentedControl) {
+        timeFormat = sender.selectedSegmentIndex
+    }
+    
+    @IBAction func currencyValueChanged(_ sender: UISegmentedControl) {
+        currency = sender.selectedSegmentIndex
+    }
     
     var isEditingProfile: Bool = false
     var myProfile: Profile?
@@ -42,6 +51,11 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         usernameLabel.text = myProfile!.username
         ageLabel.text = myProfile!.age
         addressLabel.text = myProfile!.address
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        timeFormatSegment.selectedSegmentIndex = timeFormat
+        currencySegment.selectedSegmentIndex = currency
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

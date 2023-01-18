@@ -80,11 +80,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h35-RJ-4bh">
-                                <rect key="frame" x="0.0" y="155" width="430" height="777"/>
+                                <rect key="frame" x="0.0" y="155" width="439" height="777"/>
                                 <color key="backgroundColor" red="0.79319274429999997" green="0.83745056389999994" blue="0.96472209689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bUo-eO-Be2">
-                                <rect key="frame" x="154" y="464" width="132" height="50"/>
+                                <rect key="frame" x="154" y="464" width="131" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Service" buttonSize="large"/>
@@ -185,14 +185,13 @@
                             <constraint firstItem="c2d-bt-nai" firstAttribute="top" secondItem="kTw-lh-cza" secondAttribute="top" id="F9s-ac-N8m"/>
                             <constraint firstItem="bUo-eO-Be2" firstAttribute="top" secondItem="c2d-bt-nai" secondAttribute="bottom" constant="25" id="Vkq-xu-s4w"/>
                             <constraint firstItem="c2d-bt-nai" firstAttribute="leading" secondItem="kTw-lh-cza" secondAttribute="leading" constant="25" id="d2n-jb-cCF"/>
-                            <constraint firstItem="kTw-lh-cza" firstAttribute="trailing" secondItem="h35-RJ-4bh" secondAttribute="trailing" id="euT-qF-FaG"/>
                             <constraint firstItem="h35-RJ-4bh" firstAttribute="leading" secondItem="kTw-lh-cza" secondAttribute="leading" id="lFO-OA-P9J"/>
                             <constraint firstItem="kTw-lh-cza" firstAttribute="trailing" secondItem="c2d-bt-nai" secondAttribute="trailing" constant="25" id="qUR-U2-e8g"/>
-                            <constraint firstItem="bUo-eO-Be2" firstAttribute="centerX" secondItem="kTw-lh-cza" secondAttribute="centerX" id="yoA-nC-g11"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tix-Ed-qMQ"/>
                     <connections>
+                        <outlet property="costLabel" destination="1mr-dr-nPg" id="tn1-jQ-HLb"/>
                         <outlet property="costTF" destination="G6c-68-d85" id="zr7-ue-fYR"/>
                         <outlet property="dateTF" destination="nnJ-Vm-cJp" id="xWG-ey-kt1"/>
                         <outlet property="mileageTF" destination="Gbp-Wu-OHC" id="QAv-fi-aKy"/>
@@ -336,6 +335,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="costLabel" destination="7fE-o1-Wmm" id="8GR-xK-zOg"/>
                         <outlet property="costTF" destination="r09-WR-X3B" id="g0K-4N-fZm"/>
                         <outlet property="dateTF" destination="QC9-ie-Hdp" id="DiZ-AV-LhS"/>
                         <outlet property="mileageTF" destination="fCB-4G-sJz" id="wNm-tN-fZ9"/>

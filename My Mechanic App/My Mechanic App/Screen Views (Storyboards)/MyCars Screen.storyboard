@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kxz-07-WzX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kxz-07-WzX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,17 +84,17 @@
         <scene sceneID="M9X-Xu-o9M">
             <objects>
                 <viewController id="R9s-PT-nYg" customClass="MyCarViewCarDetailsViewController" customModule="My_Mechanic_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XYw-NG-JgC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="XYw-NG-JgC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" id="lqV-Ll-KdD">
-                                <rect key="frame" x="0.0" y="155" width="393" height="697"/>
+                                <rect key="frame" x="-1" y="155" width="392" height="697"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" red="0.79319274429999997" green="0.83745056389999994" blue="0.96472209689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3xd-8Q-pZw">
-                                <rect key="frame" x="123" y="552" width="147" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3xd-8Q-pZw">
+                                <rect key="frame" x="123" y="552" width="145" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="View Services" buttonSize="large"/>
@@ -261,6 +261,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="costLabel" destination="YgL-U2-KxM" id="imP-57-bjm"/>
                         <outlet property="costTF" destination="Qgn-V0-wNt" id="vLJ-wH-b56"/>
                         <outlet property="engineTF" destination="P6U-9P-J5Y" id="DGw-mB-21X"/>
                         <outlet property="licensePlateTF" destination="tuK-xA-Ddg" id="dTO-1j-hCu"/>
@@ -294,7 +295,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AT6-to-Hm7">
-                                <rect key="frame" x="0.0" y="155" width="393" height="697"/>
+                                <rect key="frame" x="-1" y="155" width="392" height="697"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" red="0.79319274429999997" green="0.83745056389999994" blue="0.96472209689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
@@ -447,7 +448,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="4o1-Sf-djr">
-                                <rect key="frame" x="130" y="578" width="132" height="50"/>
+                                <rect key="frame" x="130" y="578" width="130" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <buttonConfiguration key="configuration" style="filled" title=" Add Car" buttonSize="large"/>
                                 <connections>
@@ -469,6 +470,7 @@
                     <navigationItem key="navigationItem" id="A69-DJ-SWw"/>
                     <connections>
                         <outlet property="cost" destination="r2O-Ir-n4h" id="bUj-7m-nIa"/>
+                        <outlet property="costLabel" destination="j0y-he-LsM" id="dA2-1v-5Ip"/>
                         <outlet property="engine" destination="eW1-wO-0nu" id="7By-Y9-9UW"/>
                         <outlet property="licensePlate" destination="bws-7f-ph4" id="RI3-Ew-Fzf"/>
                         <outlet property="manufacturer" destination="N4u-ML-BLe" id="j08-Gk-RuE"/>
