@@ -1,6 +1,7 @@
 import Foundation
 
 struct Profile: Codable {
+    var ID = UUID()
     var username: String
     var password: String
     var fullName: String

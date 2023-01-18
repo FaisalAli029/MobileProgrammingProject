@@ -84,7 +84,7 @@
                                 <color key="backgroundColor" red="0.79319274429999997" green="0.83745056389999994" blue="0.96472209689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bUo-eO-Be2">
-                                <rect key="frame" x="154" y="464" width="132" height="50"/>
+                                <rect key="frame" x="154" y="464" width="131" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Service" buttonSize="large"/>
@@ -193,6 +193,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Tix-Ed-qMQ"/>
                     <connections>
+                        <outlet property="costLabel" destination="1mr-dr-nPg" id="tn1-jQ-HLb"/>
                         <outlet property="costTF" destination="G6c-68-d85" id="zr7-ue-fYR"/>
                         <outlet property="dateTF" destination="nnJ-Vm-cJp" id="xWG-ey-kt1"/>
                         <outlet property="mileageTF" destination="Gbp-Wu-OHC" id="QAv-fi-aKy"/>
@@ -336,6 +337,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="costLabel" destination="7fE-o1-Wmm" id="8GR-xK-zOg"/>
                         <outlet property="costTF" destination="r09-WR-X3B" id="g0K-4N-fZm"/>
                         <outlet property="dateTF" destination="QC9-ie-Hdp" id="DiZ-AV-LhS"/>
                         <outlet property="mileageTF" destination="fCB-4G-sJz" id="wNm-tN-fZ9"/>

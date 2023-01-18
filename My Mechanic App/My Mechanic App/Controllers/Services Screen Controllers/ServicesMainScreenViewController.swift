@@ -70,14 +70,14 @@ class ServicesMainScreenViewController: UITableViewController {
                         //error != nil ? print(error!) : nil
                 }
                 
-                dateFormatter.dateFormat = "yyyy-MM-dd @ HH:mm"
+                dateFormatter.dateFormat = "yyyy-MM-dd @ \(getTimeFormatStr())"
                 let dateStr: String = dateFormatter.string(from: serviceDate)
                 
                 let content = UNMutableNotificationContent()
                 content.title = "Service pending: \(serviceTitle) for \(carManufacturer)"
                 content.body = """
                 Your service is scheduled for \(dateStr).
-                The total cost of the service is BHD \(serviceCost).
+                The total cost of the service is \(getCurrencyStr()) \(convertCurrency(value: serviceCost, to: getCurrencyStr())).
                 """
                 
                 let date: Date = serviceDate
@@ -122,7 +122,7 @@ extension ServicesMainScreenViewController {
             for: indexPath
         ) as! ServiceTableViewCell
         
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd @ \(getTimeFormatStr())"
         
         cell.title.text = servicesList[indexPath.row].title
         cell.date.text = dateFormatter.string(from: servicesList[indexPath.row].date)

@@ -8,6 +8,7 @@ class MyCarViewCarDetailsViewController: UIViewController {
     @IBOutlet weak var licensePlateTF: UITextField!
     @IBOutlet weak var mileageTF: UITextField!
     @IBOutlet weak var costTF: UITextField!
+    @IBOutlet weak var costLabel: UILabel!
     
     var isEditingProfile: Bool = false
     var carDetails: Car?
@@ -38,6 +39,11 @@ class MyCarViewCarDetailsViewController: UIViewController {
                 servicesList: []
             )
             
+            // If USD is selected
+            if currency == 1 {
+                newCar?.cost = convertToBHD(value: Double(costTF.text!) ?? 0.0)
+            }
+            
             updateCar(newCar: newCar!)
         }
     }
@@ -53,7 +59,13 @@ class MyCarViewCarDetailsViewController: UIViewController {
         engineTF.text = carDetails!.engine
         licensePlateTF.text = carDetails!.licensePlate
         mileageTF.text = String(carDetails!.mileage)
-        costTF.text = String(carDetails!.cost)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        costLabel.text = "Cost (\(getCurrencyStr()))"
+        costTF.placeholder = "E.g. \(getCurrencyStr()) 123456.00"
+        let costStr: String = String(convertCurrency(value: carDetails!.cost, to: getCurrencyStr()))
+        costTF.text = costStr
     }
     
     // Redirects to the 'Services' screen when the button is clicked

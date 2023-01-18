@@ -1,7 +1,7 @@
 import Foundation
 
 struct Service: Codable {
-    var id = UUID()
+    var ID = UUID()
     var title: String
     var date: Date
     var serviceMileage: Double

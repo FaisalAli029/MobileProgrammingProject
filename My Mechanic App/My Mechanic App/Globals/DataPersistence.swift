@@ -4,6 +4,48 @@ import Foundation
 
 let userInfoFileName: String = "userInfo"
 
+var timeFormat: Int = 0 // Default: 24 Hour format
+var currency: Int = 0 // Default: BHD
+
+
+
+// [[ MANAGING APP'S SETTINGS ]]
+
+// Get the time format
+func getTimeFormatStr() -> String {
+    var format: String = ""
+    
+    switch timeFormat {
+    case 0:
+        format = "HH:mm"
+    case 1:
+        format = "h:mm a"
+    default:
+        format = "HH:mm"
+    }
+    
+    return format
+}
+
+// Get currency
+func getCurrencyStr() -> String {
+    var format: String = ""
+    
+    switch currency {
+    case 0:
+        format = "BHD"
+    case 1:
+        format = "USD"
+    default:
+        format = "BHD"
+    }
+    
+    return format
+}
+
+
+// Get the currency
+
 
 
 // [[ MANAGING USER'S CARS ]]
